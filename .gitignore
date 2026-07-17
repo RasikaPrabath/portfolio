@@ -47,7 +47,6 @@ jspm_packages/
 .DS_Store
 
 # IDE
-.vscode/
 .idea/
 
 # Temporary folders
