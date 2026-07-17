@@ -6,39 +6,41 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: "#FAF5FF",
-          100: "#F3E8FF",
-          200: "#E9D5FF",
-          300: "#D8B4FE",
-          400: "#C084FC",
-          500: "#A855F7",
-          600: "#9333EA",
-          700: "#7E22CE",
-          800: "#6B21A8",
-          900: "#581C87",
-          DEFAULT: "#9333EA"
+          50: "#F5F3FF",
+          100: "#EDE9FE",
+          200: "#DDD6FE",
+          300: "#C4B5FD",
+          400: "#A78BFA",
+          500: "#8B5CF6",
+          600: "#7C3AED",
+          700: "#6D28D9",
+          800: "#5B21B6",
+          900: "#4C1D95",
+          DEFAULT: "#7C3AED"
         },
         accent: {
           DEFAULT: "#3B82F6",
-          dark: "#2563EB",
+          dark: "#1D4ED8",
           light: "#60A5FA"
         },
         dark: {
-          bg: "#0B0F1A",
-          card: "#131A2B",
-          border: "#1F2937",
-          hover: "#1E293B"
+          bg: "#07090E",
+          card: "#0F121C",
+          border: "rgba(255, 255, 255, 0.06)",
+          hover: "#171B27",
+          text: "#94A3B8"
         },
         light: {
-          bg: "#F8FAFC",
+          bg: "#F9FAFB",
           card: "#FFFFFF",
-          border: "#E2E8F0",
-          hover: "#F1F5F9"
+          border: "rgba(0, 0, 0, 0.06)",
+          hover: "#F1F5F9",
+          text: "#4B5563"
         }
       },
       fontFamily: {
-        sans: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
-        display: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Inter", "sans-serif"]
+        sans: ["'Plus Jakarta Sans'", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Inter", "sans-serif"],
+        display: ["'Syne'", "'Outfit'", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
       },
       neon: {
         cyan: '#00FFFF',

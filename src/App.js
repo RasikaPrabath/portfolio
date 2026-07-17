@@ -9,11 +9,13 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import ScrollToTop from "./components/ScrollToTop";
+import MeshBackground from "./components/MeshBackground";
 
 const App = () => {
   return (
     <>
-      <div className="bg-light-bg dark:bg-dark-bg text-gray-800 dark:text-white min-h-screen">
+      <div className="relative bg-light-bg dark:bg-dark-bg text-gray-800 dark:text-white min-h-screen overflow-x-hidden">
+        <MeshBackground />
         <Header />
         <main>
           <Hero />

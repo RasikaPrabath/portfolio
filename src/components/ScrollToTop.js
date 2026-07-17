@@ -18,29 +18,13 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      style={{
-        position: "fixed",
-        top: "93%",
-        transform: visible ? "translateY(-50%) scale(1)" : "translateY(-50%) scale(0.85)",
-        right: "40px",
-        zIndex: 9999,
-        width: "40px",
-        height: "40px",
-        borderRadius: "50%",
-        border: "none",
-        background: "linear-gradient(135deg, #6c63ff, #3b82f6)",
-        color: "white",
-        fontSize: "22px",
-        cursor: "pointer",
-        boxShadow: "0 4px 15px rgba(108,99,255,0.4)",
-        transition: "transform 0.3s, opacity 0.3s",
-        opacity: visible ? 1 : 0.0,
-        pointerEvents: visible ? "auto" : "none",
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-50%) scale(1.1)")}
-      onMouseLeave={(e) => (e.currentTarget.style.transform = `translateY(-50%) scale(${visible ? 1 : 0.85})`)}
+      className={`fixed bottom-6 right-6 z-[9999] w-10 h-10 rounded-full flex items-center justify-center border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card text-gray-900 dark:text-white shadow-sm transition-all duration-300 ${
+        visible ? "opacity-100 translate-y-0 scale-100 pointer-events-auto" : "opacity-0 translate-y-4 scale-95 pointer-events-none"
+      } hover:-translate-y-0.5 hover:border-black/10 dark:hover:border-white/10`}
     >
-      ↑
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+      </svg>
     </button>
   );
 };

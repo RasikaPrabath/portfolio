@@ -41,22 +41,21 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="relative py-16 sm:py-20 lg:py-24 dark:bg-dark-bg z-0">
-      <div className="absolute inset-4 rounded-2xl border border-gray-300 dark:border-gray-600 opacity-60"></div>
+    <section id="contact" className="relative py-16 sm:py-20 lg:py-24 bg-transparent z-0">
       <div className="relative z-10 mx-auto max-w-4xl px-6 sm:px-8 md:px-12 lg:px-16">
         <motion.div
-          className="mb-8 sm:mb-10 text-center"
+          className="mb-10 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">Contact me</h2>
-          <p className="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-normal">Let's work together on your next project</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white tracking-tight font-display">Contact me</h2>
+          <p className="mt-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-light">Let's work together on your next project</p>
         </motion.div>
 
         <motion.div
-          className="mb-10 sm:mb-12 grid grid-cols-3 gap-3 sm:gap-6"
+          className="mb-10 grid grid-cols-3 gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -66,11 +65,11 @@ const Contact = () => {
             <motion.a
               key={index}
               href={info.href}
-              className="flex flex-col items-center p-3 sm:p-6 rounded-lg sm:rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
-              whileHover={{ y: -4 }}
+              className="flex flex-col items-center p-5 rounded-3xl border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card shadow-sm hover:border-black/10 dark:hover:border-white/10 transition-all duration-300"
+              whileHover={{ y: -3 }}
             >
-              <span className="text-2xl sm:text-4xl mb-2 sm:mb-3">{info.icon}</span>
-              <h3 className="text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1">{info.label}</h3>
+              <span className="text-2xl mb-2">{info.icon}</span>
+              <h3 className="text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-1">{info.label}</h3>
               <p className="text-xs text-gray-900 dark:text-white text-center font-medium break-all hidden sm:block">
                 {info.value}
               </p>
@@ -80,15 +79,15 @@ const Contact = () => {
 
         <motion.form
           onSubmit={handleSubmit}
-          className="space-y-4"
+          className="space-y-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2">
             <div>
-              <label htmlFor="name" className="mb-2 block text-xs sm:text-sm font-medium text-gray-900 dark:text-white">
+              <label htmlFor="name" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                 Your Name
               </label>
               <input
@@ -98,12 +97,12 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full rounded-lg sm:rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-colors"
+                className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200"
                 placeholder="John Doe"
               />
             </div>
             <div>
-              <label htmlFor="email" className="mb-2 block text-xs sm:text-sm font-medium text-gray-900 dark:text-white">
+              <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                 Email Address
               </label>
               <input
@@ -113,14 +112,14 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full rounded-lg sm:rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-colors"
+                className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200"
                 placeholder="john@example.com"
               />
             </div>
           </div>
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2">
             <div>
-              <label htmlFor="subject" className="mb-2 block text-xs sm:text-sm font-medium text-gray-900 dark:text-white">
+              <label htmlFor="subject" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                 Subject
               </label>
               <input
@@ -130,12 +129,12 @@ const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full rounded-lg sm:rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-colors"
+                className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200"
                 placeholder="Project Inquiry"
               />
             </div>
             <div>
-              <label htmlFor="mobile" className="mb-2 block text-xs sm:text-sm font-medium text-gray-900 dark:text-white">
+              <label htmlFor="mobile" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                 Mobile Number
               </label>
               <input
@@ -144,13 +143,13 @@ const Contact = () => {
                 name="mobile"
                 value={formData.mobile}
                 onChange={handleChange}
-                className="w-full rounded-lg sm:rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-colors"
+                className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200"
                 placeholder="+1 (555) 000-0000"
               />
             </div>
           </div>
           <div>
-            <label htmlFor="message" className="mb-2 block text-xs sm:text-sm font-medium text-gray-900 dark:text-white">
+            <label htmlFor="message" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
               Message
             </label>
             <textarea
@@ -160,18 +159,18 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows={6}
-              className="w-full rounded-lg sm:rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-colors resize-none"
+              className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 resize-none"
               placeholder="Tell me about your project..."
             />
           </div>
-          <div className="text-center">
+          <div className="text-center pt-2">
             <motion.button
               type="submit"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 px-6 py-2.5 font-medium text-sm text-white shadow-md hover:shadow-lg transition-all duration-300"
-              whileHover={{ scale: 1.02 }}
+              className="btn-primary inline-flex items-center gap-2 shadow-sm"
+              whileHover={{ y: -1 }}
               whileTap={{ scale: 0.98 }}
             >
-              Submit now
+              <span>Submit Message</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

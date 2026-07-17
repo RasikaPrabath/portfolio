@@ -113,12 +113,10 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative py-32 bg-light-bg dark:bg-dark-bg overflow-hidden">
-      <div className="absolute inset-4 rounded-2xl border border-gray-300 dark:border-gray-600 opacity-60"></div>
-
+    <section id="about" className="relative py-24 bg-transparent overflow-hidden">
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8">
         <motion.div
-          className="mb-12 flex flex-col md:flex-row items-center gap-8 md:gap-12"
+          className="mb-12 flex flex-col md:flex-row items-center gap-8 md:gap-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -127,17 +125,19 @@ const About = () => {
           {/* Profile Image */}
           <motion.div
             className="flex-shrink-0"
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-500/20 dark:border-blue-500/40 hover:border-blue-500/50 transition-all duration-300">
-              <img 
-                src={profileImage} 
-                alt="Profile" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
+            <div className="relative w-64 h-64 md:w-72 md:h-72 p-2 bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 rounded-3xl shadow-sm">
+              <div className="w-full h-full rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
+                <img 
+                  src={profileImage} 
+                  alt="Profile" 
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
             </div>
           </motion.div>
 
@@ -149,96 +149,93 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="text-xs font-medium mb-2 uppercase tracking-wide text-blue-600 dark:text-blue-400">Introduction</h3>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight">About me</h2>
-            <p className="text-sm sm:text-base leading-relaxed text-gray-600 dark:text-gray-400 max-w-2xl font-normal">
-              Our team is proficient in a wide range of technologies for building web and mobile applications. We have a strong foundation in programming languages including <span className="text-blue-600 dark:text-blue-400 font-semibold">HTML, CSS, JavaScript, PHP, C, Java, React Js, and Next Js</span>. Additionally, we utilize modern tools and technologies such as Visual Studio Code, Figma, Git, and more. With a BSc (Hons) in Computing and Information Systems, we have successfully completed more than 5 projects.
+            <h3 className="text-xs font-semibold mb-2 uppercase tracking-widest text-gray-500 dark:text-gray-400">Introduction</h3>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight font-display">About me</h2>
+            <p className="text-sm sm:text-base leading-relaxed text-gray-600 dark:text-gray-400 max-w-2xl font-light">
+              I specialize in building modular, clean, and reliable web applications. With a solid background in Computing and Information Systems, I develop full-stack platforms using modern ecosystems like <span className="text-gray-900 dark:text-white font-medium">React, Next.js, and Node.js</span>. I am also deeply interested in quality assurance and automated testing, ensuring code elegance and robust reliability across all deliverables.
             </p>
           </motion.div>
         </motion.div>
 
-        <div className="grid gap-4 md:grid-cols-3 mt-8">
+        {/* Bento Grid Cards */}
+        <div className="grid gap-6 md:grid-cols-3 mt-12">
           {/* Languages Card */}
           <motion.div
-            className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-2xl p-6 md:p-8 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 dark:hover:shadow-blue-500/20 transition-all duration-300 group"
-            initial={{ opacity: 0, y: 30 }}
+            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 rounded-3xl p-6 hover:border-black/10 dark:hover:border-white/10 hover:shadow-md transition-all duration-300 group"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-full flex items-center justify-center mb-5 group-hover:from-blue-200 group-hover:to-indigo-200 dark:group-hover:from-blue-800/40 dark:group-hover:to-indigo-800/40 transition-all shadow-md">
-              <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            <div className="w-12 h-12 bg-gray-100 dark:bg-dark-hover rounded-2xl flex items-center justify-center mb-5 transition-colors">
+              <svg className="w-6 h-6 text-gray-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
             </div>
-            <h3 className="text-sm sm:text-base font-semibold mb-1 text-gray-900 dark:text-white tracking-tight">Languages</h3>
-            <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed font-normal">HTML, CSS, JavaScript, PHP, C, Java, React Js, Next Js</p>
+            <h3 className="text-base font-bold mb-1 text-gray-900 dark:text-white tracking-tight">Languages</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">HTML, CSS, JavaScript, PHP, C, Java, React, Next.js</p>
           </motion.div>
 
           {/* Education Card */}
           <motion.div
-            className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-2xl p-6 md:p-8 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 dark:hover:shadow-blue-500/20 transition-all duration-300 group"
-            initial={{ opacity: 0, y: 30 }}
+            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 rounded-3xl p-6 hover:border-black/10 dark:hover:border-white/10 hover:shadow-md transition-all duration-300 group"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-full flex items-center justify-center mb-5 group-hover:from-blue-200 group-hover:to-indigo-200 dark:group-hover:from-blue-800/40 dark:group-hover:to-indigo-800/40 transition-all shadow-md">
-              <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+            <div className="w-12 h-12 bg-gray-100 dark:bg-dark-hover rounded-2xl flex items-center justify-center mb-5 transition-colors">
+              <svg className="w-6 h-6 text-gray-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
               </svg>
             </div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white tracking-tight">Education</h3>
-            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-normal">BSc (Hons) in Computing and Information Systems</p>
+            <h3 className="text-base font-bold mb-1 text-gray-900 dark:text-white tracking-tight">Education</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">BSc (Hons) in Computing and Information Systems (Undergraduate)</p>
           </motion.div>
 
           {/* Projects Card */}
           <motion.div
-            className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-2xl p-6 md:p-8 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 dark:hover:shadow-blue-500/20 transition-all duration-300 group"
-            initial={{ opacity: 0, y: 30 }}
+            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 rounded-3xl p-6 hover:border-black/10 dark:hover:border-white/10 hover:shadow-md transition-all duration-300 group"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-full flex items-center justify-center mb-5 group-hover:from-blue-200 group-hover:to-indigo-200 dark:group-hover:from-blue-800/40 dark:group-hover:to-indigo-800/40 transition-all shadow-md">
-              <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            <div className="w-12 h-12 bg-gray-100 dark:bg-dark-hover rounded-2xl flex items-center justify-center mb-5 transition-colors">
+              <svg className="w-6 h-6 text-gray-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white tracking-tight">Projects</h3>
-            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-normal">Built more than 5 projects</p>
+            <h3 className="text-base font-bold mb-1 text-gray-900 dark:text-white tracking-tight">Projects</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">Built and delivered more than 5 full-stack and automation projects</p>
           </motion.div>
         </div>
 
-        {/* Tools and Technologies Section - Smaller */}
+        {/* Tools and Technologies Section */}
         <motion.div
-          className="mt-16"
+          className="mt-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-xs sm:text-sm font-medium mb-5 uppercase tracking-wide text-center text-blue-600 dark:text-blue-400">Tools & Technologies I Use</h3>
+          <h3 className="text-xs font-semibold mb-8 uppercase tracking-widest text-center text-gray-500 dark:text-gray-400">Tools & Technologies</h3>
           
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 sm:gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.name}
-                className="bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 rounded-xl p-3 sm:p-4 hover:border-blue-500 dark:hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 dark:hover:shadow-blue-500/10 transition-all duration-300 group"
-                initial={{ opacity: 0, y: 20 }}
+                className="bg-transparent border border-transparent p-3 sm:p-4 transition-all duration-300 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] hover:scale-[1.03] rounded-2xl text-center group"
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                whileHover={{ y: -5 }}
+                transition={{ duration: 0.4, delay: index * 0.03 }}
               >
-                <div className="text-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 group-hover:scale-110 transition-transform">
-                    <TechIcon name={tech.name} />
-                  </div>
-                  <h4 className="text-xs sm:text-sm font-medium text-gray-800 dark:text-white">{tech.name}</h4>
+                <div className="w-10 h-10 sm:w-11 sm:h-11 mx-auto mb-2.5 transition-transform duration-300 group-hover:scale-105">
+                  <TechIcon name={tech.name} />
                 </div>
+                <h4 className="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">{tech.name}</h4>
               </motion.div>
             ))}
           </div>
