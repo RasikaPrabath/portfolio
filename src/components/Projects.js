@@ -39,7 +39,7 @@ const Projects = () => {
           {displayedProjects.map((project, index) => (
             <motion.article
               key={project.id}
-              onClick={() => setActiveProject(project)}
+              onClick={() => window.open(project.github, '_blank', 'noopener,noreferrer')}
               className="group cursor-pointer overflow-hidden rounded-xl sm:rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-md transition-all hover:shadow-xl hover:shadow-blue-500/10"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ const Projects = () => {
                   ))}
                 </div>
                 <button className="mt-4 inline-flex items-center text-xs sm:text-sm font-medium bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 bg-clip-text text-transparent hover:from-blue-700 hover:to-indigo-700 dark:hover:from-blue-400 dark:hover:to-indigo-400 transition-all">
-                  View Project
+                  View on GitHub
                   <svg className="ml-1 h-4 w-4 text-blue-600 dark:text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

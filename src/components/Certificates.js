@@ -20,19 +20,20 @@ const Certificates = () => {
           {certificatesData.map((cert, index) => (
             <motion.div
               key={cert.id}
-              className="group rounded-lg border border-light-border dark:border-dark-border bg-light-bg dark:bg-dark-bg p-4 shadow-md transition-all hover:shadow-xl overflow-hidden"
+              className="group rounded-lg border border-light-border dark:border-dark-border bg-light-bg dark:bg-dark-bg p-4 shadow-md transition-all hover:shadow-xl overflow-hidden cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
+              onClick={() => window.open(cert.pdf, '_blank', 'noopener,noreferrer')}
             >
               {cert.image && (
-                <div className="mb-4 h-40 w-full overflow-hidden rounded-md bg-gray-100 dark:bg-gray-800">
+                <div className="mb-4 h-40 w-full overflow-hidden rounded-md bg-white p-1">
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    className="h-full w-full object-contain transition-transform group-hover:scale-105"
                   />
                 </div>
               )}
@@ -46,9 +47,12 @@ const Certificates = () => {
               <p className="mt-1 text-xs font-medium bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">{cert.year}</p>
               <a
                 href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 className="mt-3 inline-flex items-center text-xs font-medium bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 bg-clip-text text-transparent hover:from-blue-700 hover:to-indigo-700 transition-all"
               >
-                View Certificate
+                Verify Online
                 <svg className="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

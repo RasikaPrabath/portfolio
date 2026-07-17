@@ -74,51 +74,39 @@ const skillsData = {
 const certificatesData = [
   {
     id: 1,
-    title: "React Developer Certification",
-    organization: "Meta/Facebook",
-    year: "2024",
-    link: "https://coursera.org/verify/your-certificate-link",
-    image: require("../images/react_cert.png")
+    title: "MongoDB Atlas Administrator Path",
+    organization: "MongoDB",
+    year: "2026",
+    link: "https://learn.mongodb.com/c/MDBchg9ouyquk",
+    pdf: process.env.PUBLIC_URL + "/certificates/mongodb_admin.pdf",
+    image: require("../images/mongodb_admin.png")
   },
   {
     id: 2,
-    title: "JavaScript Fundamentals",
-    organization: "freeCodeCamp",
-    year: "2023",
-    link: "https://freecodecamp.org/certification/your-username/javascript-algorithms-and-data-structures",
-    image: require("../images/js_cert.png")
+    title: "MongoDB Atlas Security",
+    organization: "MongoDB",
+    year: "2026",
+    link: "https://learn.mongodb.com/c/MDByfujc6aq57",
+    pdf: process.env.PUBLIC_URL + "/certificates/mongodb_security.pdf",
+    image: require("../images/mongodb_security.png")
   },
   {
     id: 3,
-    title: "Full Stack Web Development",
-    organization: "Online Learning Platform",
-    year: "2023",
-    link: "https://your-certificate-link.com",
-    image: require("../images/fullstack_cert.png")
+    title: "MongoDB Database Metrics & Monitoring",
+    organization: "MongoDB",
+    year: "2026",
+    link: "https://learn.mongodb.com/c/MDB9r7fff86rk",
+    pdf: process.env.PUBLIC_URL + "/certificates/mongodb_metrics.pdf",
+    image: require("../images/mongodb_metrics.png")
   },
   {
     id: 4,
-    title: "Node.js Development",
-    organization: "Udemy",
-    year: "2022",
-    link: "https://udemy.com/certificate/your-certificate",
-    image: require("../images/nodejs_cert.png")
-  },
-  {
-    id: 5,
-    title: "Database Management",
-    organization: "Coursera",
-    year: "2022",
-    link: "https://coursera.org/verify/your-certificate",
-    image: require("../images/db_cert.png")
-  },
-  {
-    id: 6,
-    title: "Git & Version Control",
-    organization: "GitHub Learning Lab",
-    year: "2021",
-    link: "https://github.com/your-username/certificate",
-    image: require("../images/git_cert.png")
+    title: "Getting Started with MongoDB Atlas",
+    organization: "MongoDB",
+    year: "2026",
+    link: "https://learn.mongodb.com/c/MDB14smylcgpx",
+    pdf: process.env.PUBLIC_URL + "/certificates/mongodb_getting_started.pdf",
+    image: require("../images/mongodb_getting_started.png")
   }
 ];
 
