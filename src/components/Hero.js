@@ -119,7 +119,7 @@ const Hero = () => {
               className="flex flex-row gap-3 justify-center lg:justify-start mb-8"
             >
               <motion.a
-                href="/resume.pdf"
+                href={process.env.PUBLIC_URL + "/resume.pdf"}
                 download="Rasika_Prabath_CV.pdf"
                 className="btn-primary"
                 whileHover={{ y: -1 }}
