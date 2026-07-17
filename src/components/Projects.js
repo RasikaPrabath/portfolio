@@ -101,14 +101,14 @@ const Projects = () => {
       <AnimatePresence>
         {activeProject && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 dark:bg-black/60 px-6 backdrop-blur-md overflow-y-auto"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 dark:bg-black/60 px-6 backdrop-blur-md py-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setActiveProject(null)}
           >
             <motion.div
-              className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-3xl bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-6 sm:p-8 shadow-xl space-y-6"
+              className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-3xl bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-6 sm:p-8 shadow-xl space-y-6 scrollbar-thin"
               initial={{ y: 30, opacity: 0, scale: 0.98 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={{ y: 20, opacity: 0, scale: 0.98 }}
