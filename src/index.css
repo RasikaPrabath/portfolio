@@ -77,14 +77,24 @@
     text-decoration: none;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Syne', 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-weight: 700;
     line-height: 1.25;
     color: #111827;
   }
 
-  body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+  body.dark h1,
+  body.dark h2,
+  body.dark h3,
+  body.dark h4,
+  body.dark h5,
+  body.dark h6 {
     color: #FFFFFF;
   }
 
