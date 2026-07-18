@@ -35,6 +35,7 @@ const Experience = () => {
                   href={exp.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Visit ${exp.company}`}
                   className="hidden sm:flex absolute -right-[54px] top-6 w-3 h-3 items-center justify-center rounded-full bg-white dark:bg-dark-bg border-2 border-gray-900 dark:border-white shadow-sm hover:scale-150 hover:border-primary-500 transition-transform duration-200 cursor-pointer z-10"
                 />
 
