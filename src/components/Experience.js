@@ -24,27 +24,20 @@ const Experience = () => {
             {experienceData.map((exp, index) => (
               <motion.div
                 key={exp.id}
-                className="relative"
+                className="relative group"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {/* Timeline Dot — clickable, RIGHT side */}
-                <a
-                  href={exp.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Visit ${exp.company}`}
-                  className="hidden sm:flex absolute -right-[54px] top-6 w-3 h-3 items-center justify-center rounded-full bg-white dark:bg-dark-bg border-2 border-gray-900 dark:border-white shadow-sm hover:scale-150 hover:border-primary-500 transition-transform duration-200 cursor-pointer z-10"
+                {/* Timeline Dot — RIGHT side */}
+                <div
+                  className="hidden sm:flex absolute -right-[54px] top-6 w-3 h-3 items-center justify-center rounded-full bg-white dark:bg-dark-bg border-2 border-gray-900 dark:border-white shadow-sm group-hover:scale-150 group-hover:border-primary-500 group-hover:bg-primary-500 transition-all duration-300 z-10"
                 />
 
-                {/* Experience Card — clickable */}
-                <a
-                  href={exp.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 rounded-3xl p-6 shadow-sm hover:border-black/10 dark:hover:border-white/10 transition-all duration-300 hover:scale-[1.01] group cursor-pointer"
+                {/* Experience Card */}
+                <div
+                  className="block bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 rounded-3xl p-6 shadow-sm hover:border-black/10 dark:hover:border-white/10 transition-all duration-300 hover:scale-[1.01]"
                 >
                   <div className="flex-1 min-w-0">
                     <span className="inline-block px-2.5 py-0.5 text-xs bg-gray-100 dark:bg-dark-hover text-gray-600 dark:text-gray-400 font-semibold rounded-full mb-3">
@@ -59,16 +52,12 @@ const Experience = () => {
                           {exp.company}
                         </p>
                       </div>
-                      {/* External link arrow */}
-                      <svg className="w-4 h-4 mt-1 text-gray-300 dark:text-gray-600 group-hover:text-gray-600 dark:group-hover:text-gray-300 flex-shrink-0 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
                     </div>
                     <p className="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-light">
                       {exp.description}
                     </p>
                   </div>
-                </a>
+                </div>
               </motion.div>
             ))}
           </div>
