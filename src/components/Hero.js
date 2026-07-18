@@ -13,13 +13,13 @@ const Hero = () => {
     "Web Developer",
     "Software Engineer"
   ];
-  
+
   const typedText = useTypingEffect(skills, 100, 50, 2000);
   return (
     <section id="home" className="relative flex items-center overflow-hidden pt-4">
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 md:px-12 pt-16 pb-4 sm:pt-20 sm:pb-16 w-full">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Profile Image (Right/Top on Mobile) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -36,15 +36,15 @@ const Hero = () => {
               <div className="absolute inset-0 -m-3 sm:-m-6 lg:-m-8">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-black/5 to-black/10 dark:from-white/5 dark:to-white/10 blur-3xl" />
               </div>
-              
+
               {/* Spinning dashed circle */}
               <div className="absolute inset-0 -m-4 sm:-m-8 lg:-m-12 animate-spin-slow">
                 <div className="w-full h-full rounded-full border-2 border-dashed border-black/10 dark:border-white/10" />
               </div>
-              
+
               {/* Circular Image Container */}
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 sm:border-6 lg:border-8 border-black/5 dark:border-white/10 shadow-xl">
-                <img 
+                <img
                   src={profileImg}
                   alt="Rasika Prabath"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
@@ -54,7 +54,7 @@ const Hero = () => {
                     if (fallbackDiv) fallbackDiv.style.display = 'block';
                   }}
                 />
-                <div className="absolute inset-0" style={{display: 'none'}}>
+                <div className="absolute inset-0" style={{ display: 'none' }}>
                   <DefaultAvatar name="RP" size="full" />
                 </div>
               </div>
@@ -130,7 +130,7 @@ const Hero = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
               </motion.a>
-              
+
               <motion.a
                 href="#contact"
                 className="lets-talk-btn"
