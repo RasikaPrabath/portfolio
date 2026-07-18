@@ -62,14 +62,15 @@
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
     color: #4B5563;
-    background-color: #F9FAFB;
+    /* background handled by MeshBackground canvas layer */
+    background-color: transparent;
     line-height: 1.65;
     font-weight: 400;
   }
 
   body.dark {
     color: #94A3B8;
-    background-color: #07090E;
+    background-color: transparent;
   }
 
   a {
@@ -118,8 +119,7 @@
 
   section {
     position: relative;
-    z-index: 1;
-    isolation: isolate;
+    z-index: auto;
   }
 }
 
