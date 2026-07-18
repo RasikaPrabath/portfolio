@@ -16,8 +16,8 @@ const Hero = () => {
   
   const typedText = useTypingEffect(skills, 100, 50, 2000);
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-4">
-      <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 md:px-12 pt-10 pb-16 sm:pt-16 sm:pb-24 w-full -mt-10 sm:-mt-16 lg:-mt-20">
+    <section id="home" className="relative flex items-center overflow-hidden pt-4">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 md:px-12 pt-16 pb-4 sm:pt-20 sm:pb-16 w-full">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
           {/* Profile Image (Right/Top on Mobile) */}
@@ -116,7 +116,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
-              className="flex flex-row gap-3 justify-center lg:justify-start mb-8"
+              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8"
             >
               <motion.a
                 href={process.env.PUBLIC_URL + "/resume.pdf"}

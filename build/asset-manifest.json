@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.aaa5a22b.css",
-    "main.js": "/portfolio/static/js/main.bfc479d4.js",
+    "main.css": "/portfolio/static/css/main.8aa1033a.css",
+    "main.js": "/portfolio/static/js/main.73a8dddc.js",
     "static/js/453.a7d99afe.chunk.js": "/portfolio/static/js/453.a7d99afe.chunk.js",
     "static/media/mongodb_getting_started.png": "/portfolio/static/media/mongodb_getting_started.7c5780894915e3178cec.png",
     "static/media/mongodb_metrics.png": "/portfolio/static/media/mongodb_metrics.3d9303ee172d6abddba4.png",
@@ -14,12 +14,12 @@
     "static/media/travelease.jpg": "/portfolio/static/media/travelease.58d4f869e9ae09458ea6.jpg",
     "static/media/234.jpeg": "/portfolio/static/media/234.8ba44a6e8f8e16661eb1.jpeg",
     "index.html": "/portfolio/index.html",
-    "main.aaa5a22b.css.map": "/portfolio/static/css/main.aaa5a22b.css.map",
-    "main.bfc479d4.js.map": "/portfolio/static/js/main.bfc479d4.js.map",
+    "main.8aa1033a.css.map": "/portfolio/static/css/main.8aa1033a.css.map",
+    "main.73a8dddc.js.map": "/portfolio/static/js/main.73a8dddc.js.map",
     "453.a7d99afe.chunk.js.map": "/portfolio/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aaa5a22b.css",
-    "static/js/main.bfc479d4.js"
+    "static/css/main.8aa1033a.css",
+    "static/js/main.73a8dddc.js"
   ]
 }

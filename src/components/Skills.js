@@ -62,7 +62,7 @@ const Skills = () => {
         <div className="grid md:grid-cols-2 gap-6">
           {/* Coding Skills */}
           <motion.div
-            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-8 rounded-3xl shadow-sm"
+            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-5 sm:p-8 rounded-3xl shadow-sm"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -76,7 +76,7 @@ const Skills = () => {
 
           {/* Professional Skills */}
           <motion.div
-            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-8 rounded-3xl shadow-sm"
+            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-5 sm:p-8 rounded-3xl shadow-sm"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

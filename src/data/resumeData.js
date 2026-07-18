@@ -24,31 +24,27 @@ const educationData = [
 const experienceData = [
   {
     id: 1,
-    company: "Your Current Company",
-    position: "Software Developer",
-    period: "2023 - Present",
-    description: "Developing web applications using React, Node.js, and modern JavaScript. Working on full-stack projects and collaborating with cross-functional teams."
+    company: "Simplify Art",
+    position: "Graphic Designer",
+    period: "Mar 2025 - Present",
+    description: "Working as a Graphic Designer at Simplify Art since March 2025, creating visually appealing designs and enhancing user experiences through creative graphics and layouts.",
+    url: "https://www.instagram.com/simplify.art.lk"
   },
   {
     id: 2,
-    company: "Freelance Projects",
-    position: "Full Stack Developer",
-    period: "2022 - 2023",
-    description: "Built custom websites and web applications for various clients. Specialized in React, Express.js, and database integration."
+    company: "CodeHavenAcademy · YouTube",
+    position: "Content Creator",
+    period: "May 2024 - Present",
+    description: "Content Creator at CodeHavenAcademy on YouTube, producing educational tutorials and coding tips to help developers solve problems, learn effectively, and grow their programming skills.",
+    url: "https://www.youtube.com/@CodeHavenAcademy"
   },
   {
     id: 3,
-    company: "Internship/Training",
-    position: "Junior Developer",
-    period: "2022 - 2022",
-    description: "Gained hands-on experience in software development lifecycle, testing, and deployment processes."
-  },
-  {
-    id: 4,
-    company: "Design & Development Studio",
-    position: "UI/UX Engineering",
-    period: "2021 - 2022",
-    description: "Designed and engineered user interfaces with a focus on user experience. Created wireframes, prototypes, and high-fidelity designs using Figma. Collaborated with developers to implement responsive, accessible, and visually appealing web interfaces."
+    company: "Fiverr",
+    position: "Freelance Graphic Designer",
+    period: "Jun 2022 - Sep 2023",
+    description: "Freelance Graphic Designer on Fiverr, creating custom designs and visual content for clients worldwide.",
+    url: "https://www.fiverr.com"
   }
 ];
 

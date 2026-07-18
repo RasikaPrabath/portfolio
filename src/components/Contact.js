@@ -55,7 +55,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className="mb-10 grid grid-cols-3 gap-4"
+          className="mb-10 grid grid-cols-1 sm:grid-cols-3 gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -70,7 +70,7 @@ const Contact = () => {
             >
               <span className="text-2xl mb-2">{info.icon}</span>
               <h3 className="text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-1">{info.label}</h3>
-              <p className="text-xs text-gray-900 dark:text-white text-center font-medium break-all hidden sm:block">
+              <p className="text-xs text-gray-900 dark:text-white text-center font-medium break-all">
                 {info.value}
               </p>
             </motion.a>
