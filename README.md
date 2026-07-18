@@ -311,3 +311,41 @@ Feel free to submit issues and enhancement requests!
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🔍 Google Search Console & SEO Setup Guide
+
+This guide documents the exact steps taken to verify this portfolio website on **Google Search Console** and optimize it for **Google Search (SEO)**.
+
+### 🛠️ 1. Changes Made in the Codebase
+- **[index.html](file:///c:/Users/ASUS/AppData/Local/CapCut/Videos/New%20folder/portfolio/public/index.html)**: Added primary SEO metadata (title, keywords, description), Open Graph (OG) tags for social media sharing, Twitter cards, and structured JSON-LD data (Person schema) so Google search crawlers can index the site with rich snippets.
+- **[sitemap.xml](file:///c:/Users/ASUS/AppData/Local/CapCut/Videos/New%20folder/portfolio/public/sitemap.xml)**: Created a sitemap to map the main domain.
+- **[robots.txt](file:///c:/Users/ASUS/AppData/Local/CapCut/Videos/New%20folder/portfolio/public/robots.txt)**: Added the Sitemap link to tell search spiders where to find it.
+- **[CNAME](file:///c:/Users/ASUS/AppData/Local/CapCut/Videos/New%20folder/portfolio/public/CNAME)**: Added for custom domain binding configuration.
+- **Vercel Automatic Deployment**: Pushed code to the `main` branch to trigger Vercel to rebuild and redeploy the site automatically.
+
+### 🚀 2. Steps to Connect & Verify on Google Search Console
+If you ever need to set up or verify this domain (`https://www.rasikaprabath.me/`) again, follow these steps:
+
+1. **Add Property**:
+   - Go to [Google Search Console](https://search.google.com/search-console).
+   - Sign in with your Google account.
+   - Choose the **URL Prefix** option and enter: `https://www.rasikaprabath.me/`
+   
+2. **Verification**:
+   - Choose the **HTML file** verification method.
+   - The verification filename provided was `google36600d273ca1c6f6.html`.
+   - Place this file in the `public/` directory (already added in this project).
+   - Deploy/Push the code to the `main` branch so it goes live via Vercel.
+   - Once the live URL `https://www.rasikaprabath.me/google36600d273ca1c6f6.html` is accessible, click **Verify** in Search Console.
+
+3. **Submit Sitemap**:
+   - In Search Console, select **Sitemaps** on the left menu.
+   - Under *Add a new sitemap*, enter **`sitemap.xml`** and click **Submit**.
+   - Ensure the status shows **Success**.
+
+4. **Request Priority Indexing**:
+   - Use the **URL Inspection** search bar at the top of Search Console.
+   - Search for `https://www.rasikaprabath.me/`.
+   - Click **Request Indexing** to tell Google to re-crawl your homepage and update search results with your new SEO titles and tags.
