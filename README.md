@@ -148,7 +148,7 @@ Made with ❤️ by Rasika Prabath
 - 💼 LinkedIn: [linkedin.com/in/rasikaprabath](https://linkedin.com/in/rasikaprabath)
 - 🐙 GitHub: [github.com/rasikaprabath12345](https://github.com/rasikaprabath12345)
 - 🎬 Instagram: [@rasikaprabath12345](https://instagram.com/rasikaprabath12345)
-- 📱 Telegram: [@rasikaprabath](https://t.me/rasikaprabath)
+- 📱 Telegram: [@rasikaprabath1](https://t.me/rasikaprabath1)
 
 ---
 
