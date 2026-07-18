@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8aa1033a.css",
-    "main.js": "/portfolio/static/js/main.73a8dddc.js",
-    "static/js/453.a7d99afe.chunk.js": "/portfolio/static/js/453.a7d99afe.chunk.js",
-    "static/media/mongodb_getting_started.png": "/portfolio/static/media/mongodb_getting_started.7c5780894915e3178cec.png",
-    "static/media/mongodb_metrics.png": "/portfolio/static/media/mongodb_metrics.3d9303ee172d6abddba4.png",
-    "static/media/mongodb_admin.png": "/portfolio/static/media/mongodb_admin.2bfc333c1e9534c8f298.png",
-    "static/media/mongodb_security.png": "/portfolio/static/media/mongodb_security.c79f4126914ee271c116.png",
-    "static/media/profile.jpg": "/portfolio/static/media/profile.2ab0cfc392f8710b62dc.jpg",
-    "static/media/unishare_platform.png": "/portfolio/static/media/unishare_platform.23ec0834bbc8735b3e6f.png",
-    "static/media/luxury_store.png": "/portfolio/static/media/luxury_store.12c806262143bdc8cb1b.png",
-    "static/media/osethra_hospital.png": "/portfolio/static/media/osethra_hospital.f854c4e926d8796b140d.png",
-    "static/media/travelease.jpg": "/portfolio/static/media/travelease.58d4f869e9ae09458ea6.jpg",
-    "static/media/234.jpeg": "/portfolio/static/media/234.8ba44a6e8f8e16661eb1.jpeg",
-    "index.html": "/portfolio/index.html",
-    "main.8aa1033a.css.map": "/portfolio/static/css/main.8aa1033a.css.map",
-    "main.73a8dddc.js.map": "/portfolio/static/js/main.73a8dddc.js.map",
-    "453.a7d99afe.chunk.js.map": "/portfolio/static/js/453.a7d99afe.chunk.js.map"
+    "main.css": "/static/css/main.76970637.css",
+    "main.js": "/static/js/main.01af00a1.js",
+    "static/js/453.a7d99afe.chunk.js": "/static/js/453.a7d99afe.chunk.js",
+    "static/media/mongodb_getting_started.png": "/static/media/mongodb_getting_started.7c5780894915e3178cec.png",
+    "static/media/mongodb_metrics.png": "/static/media/mongodb_metrics.3d9303ee172d6abddba4.png",
+    "static/media/mongodb_admin.png": "/static/media/mongodb_admin.2bfc333c1e9534c8f298.png",
+    "static/media/mongodb_security.png": "/static/media/mongodb_security.c79f4126914ee271c116.png",
+    "static/media/profile.jpg": "/static/media/profile.2ab0cfc392f8710b62dc.jpg",
+    "static/media/unishare_platform.png": "/static/media/unishare_platform.23ec0834bbc8735b3e6f.png",
+    "static/media/luxury_store.png": "/static/media/luxury_store.12c806262143bdc8cb1b.png",
+    "static/media/osethra_hospital.png": "/static/media/osethra_hospital.f854c4e926d8796b140d.png",
+    "static/media/travelease.jpg": "/static/media/travelease.58d4f869e9ae09458ea6.jpg",
+    "static/media/234.jpeg": "/static/media/234.8ba44a6e8f8e16661eb1.jpeg",
+    "index.html": "/index.html",
+    "main.76970637.css.map": "/static/css/main.76970637.css.map",
+    "main.01af00a1.js.map": "/static/js/main.01af00a1.js.map",
+    "453.a7d99afe.chunk.js.map": "/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8aa1033a.css",
-    "static/js/main.73a8dddc.js"
+    "static/css/main.76970637.css",
+    "static/js/main.01af00a1.js"
   ]
 }
