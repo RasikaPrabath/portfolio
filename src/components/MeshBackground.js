@@ -44,6 +44,8 @@ const MeshBackground = () => {
     let nebulae = [];
     let shootingStars = [];
     let stardust = [];
+    let lastWidth = 0;
+    let lastHeight = 0;
 
     // Helper: Determine if dark mode is active
     const isDark = () =>
@@ -54,9 +56,14 @@ const MeshBackground = () => {
     const initElements = (W, H) => {
       // 1. Star layers (Layer 0 = background, Layer 1 = midground, Layer 2 = foreground)
       stars = [];
+      const isMobile = W < 768;
+
+      const countL0 = isMobile ? 35 : 90;
+      const countL1 = isMobile ? 20 : 50;
+      const countL2 = isMobile ? 6 : 15;
 
       // Layer 0: Background stars (Small, slow/static, dense)
-      for (let i = 0; i < 90; i++) {
+      for (let i = 0; i < countL0; i++) {
         stars.push({
           x: Math.random() * W,
           y: Math.random() * H,
@@ -71,7 +78,7 @@ const MeshBackground = () => {
       }
 
       // Layer 1: Midground stars (Medium, drift, constellation-capable)
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < countL1; i++) {
         stars.push({
           x: Math.random() * W,
           y: Math.random() * H,
@@ -86,7 +93,7 @@ const MeshBackground = () => {
       }
 
       // Layer 2: Foreground stars (Larger, glowing aura, drift faster)
-      for (let i = 0; i < 15; i++) {
+      for (let i = 0; i < countL2; i++) {
         stars.push({
           x: Math.random() * W,
           y: Math.random() * H,
@@ -115,9 +122,21 @@ const MeshBackground = () => {
 
     // Resize Handler
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initElements(canvas.width, canvas.height);
+      const W = window.innerWidth;
+      const H = window.innerHeight;
+
+      // On mobile, scrolling triggers resize due to address bar toggling.
+      // We only recreate elements if the width changes, or if the height changes substantially.
+      const widthChanged = W !== lastWidth;
+      const heightSubstantiallyChanged = Math.abs(H - lastHeight) > 120;
+
+      if (widthChanged || heightSubstantiallyChanged) {
+        canvas.width = W;
+        canvas.height = H;
+        initElements(W, H);
+        lastWidth = W;
+        lastHeight = H;
+      }
     };
 
     resize();
