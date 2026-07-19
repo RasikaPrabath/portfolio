@@ -9,7 +9,7 @@ const COLORS_DARK = {
     { r: 88, g: 28, b: 135 },  // purple-900 (subtle deep violet)
     { r: 15, g: 118, b: 110 },  // teal-700 (deep sea teal)
   ],
-  stardust: ["#a78bfa", "#60a5fa", "#818cf8", "#fde047"],
+  stardust: ["#c084fc", "#60a5fa", "#818cf8", "#fde047", "#f472b6"],
   constellation: "rgba(165, 180, 252, 0.08)", // very subtle line
 };
 
@@ -21,7 +21,7 @@ const COLORS_LIGHT = {
     { r: 178, g: 223, b: 219 },  // soft pastel teal
     { r: 248, g: 187, b: 208 },  // soft pastel pink/rose
   ],
-  stardust: ["#cbd5e1", "#94a3b8", "#e2e8f0"], // very soft slate particles
+  stardust: ["#6366f1", "#3b82f6", "#ec4899", "#8b5cf6", "#10b981"],
   constellation: "rgba(100, 116, 139, 0.15)", // soft slate line
 };
 
@@ -158,19 +158,18 @@ const MeshBackground = () => {
 
       // Generate interactive stardust sparkles if the mouse has moved enough
       const dist = Math.hypot(e.clientX - prevX, e.clientY - prevY);
-      if (dist > 6) {
+      if (dist > 5) {
         const dark = isDark();
         const colors = dark ? COLORS_DARK.stardust : COLORS_LIGHT.stardust;
-        const count = dark ? 2 : 1;
-        for (let i = 0; i < count; i++) {
+        for (let i = 0; i < 2; i++) {
           stardust.push({
             x: e.clientX,
             y: e.clientY,
-            vx: (Math.random() - 0.5) * (dark ? 1.5 : 0.8),
-            vy: (Math.random() - 0.5) * (dark ? 1.5 : 0.8) - 0.2, // float upward slightly
-            r: dark ? (1.0 + Math.random() * 2.0) : (0.5 + Math.random() * 1.0),
-            alpha: dark ? 1.0 : 0.6,
-            decay: dark ? (0.015 + Math.random() * 0.02) : (0.04 + Math.random() * 0.04),
+            vx: (Math.random() - 0.5) * 1.8,
+            vy: (Math.random() - 0.5) * 1.8 - 0.3, // float upward slightly
+            r: 1.2 + Math.random() * 2.5,
+            alpha: 1.0,
+            decay: 0.015 + Math.random() * 0.02,
             color: colors[Math.floor(Math.random() * colors.length)],
           });
         }
@@ -181,8 +180,20 @@ const MeshBackground = () => {
       mouseRef.current.active = false;
     };
 
+    const handleTouchMove = (e) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        const fakeEvent = {
+          clientX: touch.clientX,
+          clientY: touch.clientY
+        };
+        handleMouseMove(fakeEvent);
+      }
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     // Animation Tick Loop
     const tick = () => {
@@ -373,32 +384,31 @@ const MeshBackground = () => {
       }
 
       // ── 5. DRAW INTERACTIVE STARDUST DUST PARTICLES ────────────────────────
-      stardust.forEach((p, idx) => {
+      for (let i = stardust.length - 1; i >= 0; i--) {
+        const p = stardust[i];
         p.x += p.vx;
         p.y += p.vy;
         p.alpha -= p.decay;
         p.r = Math.max(0.2, p.r - 0.015);
 
         if (p.alpha <= 0 || p.r <= 0.2) {
-          stardust.splice(idx, 1);
-          return;
+          stardust.splice(i, 1);
+          continue;
         }
 
         // Draw sparkling star dust
         ctx.save();
         ctx.globalAlpha = p.alpha;
-        ctx.fillStyle = p.color;
 
-        // Radial shimmer glow around stardust particles
-        if (dark) {
-          const dustGlow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3.5);
-          dustGlow.addColorStop(0, p.color);
-          dustGlow.addColorStop(1, "transparent");
-          ctx.fillStyle = dustGlow;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r * 3.5, 0, Math.PI * 2);
-          ctx.fill();
-        }
+        // Radial shimmer glow around stardust particles (both modes)
+        const glowRadius = p.r * (dark ? 3.5 : 2.5);
+        const dustGlow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowRadius);
+        dustGlow.addColorStop(0, p.color);
+        dustGlow.addColorStop(1, "transparent");
+        ctx.fillStyle = dustGlow;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, glowRadius, 0, Math.PI * 2);
+        ctx.fill();
 
         // Core sparkle
         ctx.fillStyle = dark ? "#ffffff" : p.color;
@@ -407,7 +417,7 @@ const MeshBackground = () => {
         ctx.fill();
 
         ctx.restore();
-      });
+      }
 
       animId = requestAnimationFrame(tick);
     };
@@ -421,6 +431,7 @@ const MeshBackground = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
