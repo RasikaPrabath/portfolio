@@ -14,15 +14,15 @@ const COLORS_DARK = {
 };
 
 const COLORS_LIGHT = {
-  stars: ["#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#94a3b8"], // monochrome slate grays
+  stars: ["#475569", "#64748b", "#818cf8", "#4f46e5", "#475569"], // slate and indigo tones
   nebulae: [
-    { r: 243, g: 244, b: 246 },  // very soft gray-100
-    { r: 238, g: 242, b: 255 },  // very soft indigo-50
-    { r: 245, g: 243, b: 255 },  // very soft purple-50
-    { r: 240, g: 253, b: 250 },  // very soft teal-50
+    { r: 197, g: 202, b: 233 },  // soft pastel indigo-blue
+    { r: 218, g: 200, b: 238 },  // soft pastel violet
+    { r: 178, g: 223, b: 219 },  // soft pastel teal
+    { r: 248, g: 187, b: 208 },  // soft pastel pink/rose
   ],
   stardust: ["#cbd5e1", "#94a3b8", "#e2e8f0"], // very soft slate particles
-  constellation: "rgba(148, 163, 184, 0.04)", // extremely faint connections
+  constellation: "rgba(100, 116, 139, 0.15)", // soft slate line
 };
 
 // ── COMPONENT ─────────────────────────────────────────────────────────────────
@@ -215,7 +215,7 @@ const MeshBackground = () => {
         const drawY = (n.y - scrollOffset + H * 5) % (H + n.r * 2) - n.r;
 
         const rgb = palette.nebulae[n.colorIdx % palette.nebulae.length];
-        const nebulaAlpha = dark ? 0.05 : 0.035;
+        const nebulaAlpha = dark ? 0.05 : 0.22;
 
         const grad = ctx.createRadialGradient(n.x, drawY, 0, n.x, drawY, currentR);
         grad.addColorStop(0, `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${nebulaAlpha})`);
@@ -316,7 +316,7 @@ const MeshBackground = () => {
         // Twinkle pulsing
         const twinkle = Math.sin(t * s.twinkleSpeed * 10 + s.phase) * 0.45 + 0.55;
         const baseAlpha = s.layer === 0 ? 0.35 : s.layer === 1 ? 0.7 : 0.95;
-        const alpha = twinkle * baseAlpha * (dark ? 1.0 : 0.38);
+        const alpha = twinkle * baseAlpha * (dark ? 1.0 : 0.65);
         const starColor = palette.stars[s.colorIdx % palette.stars.length];
 
         // Foreground star Glow (Layer 2 only)
@@ -362,7 +362,7 @@ const MeshBackground = () => {
             const lineAlpha = (1.0 - dist / maxDistance);
             ctx.strokeStyle = dark
               ? `rgba(165, 180, 252, ${lineAlpha * 0.08})`
-              : `rgba(148, 163, 184, ${lineAlpha * 0.12})`;
+              : `rgba(100, 116, 139, ${lineAlpha * 0.15})`;
             ctx.lineWidth = 0.45;
             ctx.beginPath();
             ctx.moveTo(s1.screenX, s1.screenY);
