@@ -196,7 +196,7 @@ const MeshBackground = () => {
       ctx.clearRect(0, 0, W, H);
 
       // ── 1. RENDER CELESTIAL NEBULAE (BACKGROUND GLOWS) ──────────────────────
-      ctx.globalCompositeOperation = dark ? "screen" : "multiply";
+      ctx.globalCompositeOperation = dark ? "screen" : "source-over";
       nebulae.forEach((n) => {
         // Drift movement
         n.x += n.vx;
@@ -316,7 +316,7 @@ const MeshBackground = () => {
         // Twinkle pulsing
         const twinkle = Math.sin(t * s.twinkleSpeed * 10 + s.phase) * 0.45 + 0.55;
         const baseAlpha = s.layer === 0 ? 0.35 : s.layer === 1 ? 0.7 : 0.95;
-        const alpha = twinkle * baseAlpha * (dark ? 1.0 : 0.18);
+        const alpha = twinkle * baseAlpha * (dark ? 1.0 : 0.38);
         const starColor = palette.stars[s.colorIdx % palette.stars.length];
 
         // Foreground star Glow (Layer 2 only)
@@ -362,7 +362,7 @@ const MeshBackground = () => {
             const lineAlpha = (1.0 - dist / maxDistance);
             ctx.strokeStyle = dark
               ? `rgba(165, 180, 252, ${lineAlpha * 0.08})`
-              : `rgba(148, 163, 184, ${lineAlpha * 0.04})`;
+              : `rgba(148, 163, 184, ${lineAlpha * 0.12})`;
             ctx.lineWidth = 0.45;
             ctx.beginPath();
             ctx.moveTo(s1.screenX, s1.screenY);
