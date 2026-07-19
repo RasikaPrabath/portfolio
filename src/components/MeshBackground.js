@@ -2,33 +2,33 @@ import React, { useEffect, useRef } from "react";
 
 // ── COLOR PALETTES ────────────────────────────────────────────────────────────
 const COLORS_DARK = {
-  stars: ["#ffffff", "#e0e7ff", "#f472b6", "#67e8f9", "#fbbf24"],
+  stars: ["#ffffff", "#e2e8f0", "#cbd5e1", "#a5b4fc", "#fde047"], // soft whites, slates, light lavender, soft warm yellow
   nebulae: [
-    { r: 49, g: 46, b: 129 },   // indigo-900
-    { r: 109, g: 40, b: 217 },  // violet-700
-    { r: 13, g: 148, b: 136 },  // teal-600
-    { r: 131, g: 24, b: 67 },   // pink-900
+    { r: 17, g: 24, b: 39 },   // gray-900 (deep slate)
+    { r: 30, g: 27, b: 75 },   // indigo-950 (deep indigo)
+    { r: 88, g: 28, b: 135 },  // purple-900 (subtle deep violet)
+    { r: 15, g: 118, b: 110 },  // teal-700 (deep sea teal)
   ],
-  stardust: ["#a78bfa", "#60a5fa", "#34d399", "#f472b6", "#fbbf24"],
-  constellation: "rgba(167, 139, 250, 0.15)", // soft purple line
+  stardust: ["#a78bfa", "#60a5fa", "#818cf8", "#fde047"],
+  constellation: "rgba(165, 180, 252, 0.08)", // very subtle line
 };
 
 const COLORS_LIGHT = {
-  stars: ["#475569", "#64748b", "#0284c7", "#7c3aed", "#d97706"], // Slate, blue, violet, amber
+  stars: ["#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#94a3b8"], // monochrome slate grays
   nebulae: [
-    { r: 224, g: 231, b: 255 },  // soft indigo
-    { r: 243, g: 232, b: 255 },  // soft purple
-    { r: 204, g: 251, b: 241 },  // soft teal
-    { r: 254, g: 226, b: 226 },  // soft rose
+    { r: 243, g: 244, b: 246 },  // very soft gray-100
+    { r: 238, g: 242, b: 255 },  // very soft indigo-50
+    { r: 245, g: 243, b: 255 },  // very soft purple-50
+    { r: 240, g: 253, b: 250 },  // very soft teal-50
   ],
-  stardust: ["#c084fc", "#93c5fd", "#fca5a5", "#fde047", "#86efac"],
-  constellation: "rgba(100, 116, 139, 0.12)", // soft slate line
+  stardust: ["#cbd5e1", "#94a3b8", "#e2e8f0"], // very soft slate particles
+  constellation: "rgba(148, 163, 184, 0.04)", // extremely faint connections
 };
 
 // ── COMPONENT ─────────────────────────────────────────────────────────────────
 const MeshBackground = () => {
   const canvasRef = useRef(null);
-  
+
   // Track mouse coordinates and scroll position without triggering re-renders
   const mouseRef = useRef({ x: -1000, y: -1000, active: false });
   const scrollRef = useRef(0);
@@ -54,7 +54,7 @@ const MeshBackground = () => {
     const initElements = (W, H) => {
       // 1. Star layers (Layer 0 = background, Layer 1 = midground, Layer 2 = foreground)
       stars = [];
-      
+
       // Layer 0: Background stars (Small, slow/static, dense)
       for (let i = 0; i < 90; i++) {
         stars.push({
@@ -65,8 +65,8 @@ const MeshBackground = () => {
           twinkleSpeed: 0.01 + Math.random() * 0.02,
           phase: Math.random() * Math.PI * 2,
           colorIdx: Math.floor(Math.random() * 5),
-          vx: (Math.random() - 0.5) * 0.01,
-          vy: -(0.01 + Math.random() * 0.02),
+          vx: (Math.random() - 0.5) * 0.004,
+          vy: -(0.004 + Math.random() * 0.008),
         });
       }
 
@@ -80,8 +80,8 @@ const MeshBackground = () => {
           twinkleSpeed: 0.03 + Math.random() * 0.03,
           phase: Math.random() * Math.PI * 2,
           colorIdx: Math.floor(Math.random() * 5),
-          vx: (Math.random() - 0.5) * 0.04,
-          vy: -(0.03 + Math.random() * 0.05),
+          vx: (Math.random() - 0.5) * 0.015,
+          vy: -(0.01 + Math.random() * 0.02),
         });
       }
 
@@ -95,8 +95,8 @@ const MeshBackground = () => {
           twinkleSpeed: 0.05 + Math.random() * 0.05,
           phase: Math.random() * Math.PI * 2,
           colorIdx: Math.floor(Math.random() * 5),
-          vx: (Math.random() - 0.5) * 0.08,
-          vy: -(0.06 + Math.random() * 0.08),
+          vx: (Math.random() - 0.5) * 0.03,
+          vy: -(0.02 + Math.random() * 0.04),
         });
       }
 
@@ -105,8 +105,8 @@ const MeshBackground = () => {
         x: W * (0.15 + i * 0.25),
         y: H * (0.2 + (i % 2) * 0.5),
         r: Math.min(W, H) * (0.35 + Math.random() * 0.2),
-        vx: (Math.random() - 0.5) * 0.08,
-        vy: (Math.random() - 0.5) * 0.08,
+        vx: (Math.random() - 0.5) * 0.02,
+        vy: (Math.random() - 0.5) * 0.02,
         phase: Math.random() * Math.PI * 2,
         speed: 0.05 + Math.random() * 0.05,
         colorIdx: i,
@@ -142,15 +142,16 @@ const MeshBackground = () => {
       if (dist > 6) {
         const dark = isDark();
         const colors = dark ? COLORS_DARK.stardust : COLORS_LIGHT.stardust;
-        for (let i = 0; i < 2; i++) {
+        const count = dark ? 2 : 1;
+        for (let i = 0; i < count; i++) {
           stardust.push({
             x: e.clientX,
             y: e.clientY,
-            vx: (Math.random() - 0.5) * 1.5,
-            vy: (Math.random() - 0.5) * 1.5 - 0.5, // float upward slightly
-            r: 1.0 + Math.random() * 2.0,
-            alpha: 1.0,
-            decay: 0.015 + Math.random() * 0.02,
+            vx: (Math.random() - 0.5) * (dark ? 1.5 : 0.8),
+            vy: (Math.random() - 0.5) * (dark ? 1.5 : 0.8) - 0.2, // float upward slightly
+            r: dark ? (1.0 + Math.random() * 2.0) : (0.5 + Math.random() * 1.0),
+            alpha: dark ? 1.0 : 0.6,
+            decay: dark ? (0.015 + Math.random() * 0.02) : (0.04 + Math.random() * 0.04),
             color: colors[Math.floor(Math.random() * colors.length)],
           });
         }
@@ -195,7 +196,7 @@ const MeshBackground = () => {
         const drawY = (n.y - scrollOffset + H * 5) % (H + n.r * 2) - n.r;
 
         const rgb = palette.nebulae[n.colorIdx % palette.nebulae.length];
-        const nebulaAlpha = dark ? 0.085 : 0.07;
+        const nebulaAlpha = dark ? 0.05 : 0.035;
 
         const grad = ctx.createRadialGradient(n.x, drawY, 0, n.x, drawY, currentR);
         grad.addColorStop(0, `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${nebulaAlpha})`);
@@ -211,8 +212,8 @@ const MeshBackground = () => {
       ctx.globalCompositeOperation = "source-over";
 
       // ── 2. RANDOM METEORS / SHOOTING STARS ─────────────────────────────────
-      // Trigger new shooting star occasionally
-      if (Math.random() < 0.0007 && shootingStars.length < 2) {
+      // Trigger new shooting star occasionally (dark mode only)
+      if (dark && Math.random() < 0.0005 && shootingStars.length < 2) {
         shootingStars.push({
           x: Math.random() * W * 0.8,
           y: Math.random() * H * 0.4,
@@ -295,7 +296,8 @@ const MeshBackground = () => {
 
         // Twinkle pulsing
         const twinkle = Math.sin(t * s.twinkleSpeed * 10 + s.phase) * 0.45 + 0.55;
-        const alpha = twinkle * (s.layer === 0 ? 0.35 : s.layer === 1 ? 0.7 : 0.95);
+        const baseAlpha = s.layer === 0 ? 0.35 : s.layer === 1 ? 0.7 : 0.95;
+        const alpha = twinkle * baseAlpha * (dark ? 1.0 : 0.18);
         const starColor = palette.stars[s.colorIdx % palette.stars.length];
 
         // Foreground star Glow (Layer 2 only)
@@ -338,10 +340,10 @@ const MeshBackground = () => {
 
           if (dist < maxDistance) {
             // Stronger opacity when closer
-            const lineAlpha = (1.0 - dist / maxDistance) * (dark ? 0.8 : 0.6);
+            const lineAlpha = (1.0 - dist / maxDistance);
             ctx.strokeStyle = dark
-              ? `rgba(167, 139, 250, ${lineAlpha * 0.16})`
-              : `rgba(100, 116, 139, ${lineAlpha * 0.12})`;
+              ? `rgba(165, 180, 252, ${lineAlpha * 0.08})`
+              : `rgba(148, 163, 184, ${lineAlpha * 0.04})`;
             ctx.lineWidth = 0.45;
             ctx.beginPath();
             ctx.moveTo(s1.screenX, s1.screenY);
@@ -409,12 +411,12 @@ const MeshBackground = () => {
       <div
         className="fixed inset-0 pointer-events-none bg-[#030508] dark:bg-[#07090e] transition-colors duration-300"
         style={{
-          zIndex: 0,
+          zIndex: -2,
           background: "linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%)",
         }}
         aria-hidden="true"
       />
-      
+
       {/* Set CSS custom properties for start and end backgrounds dynamically so transition looks stellar */}
       <style>{`
         :root {
@@ -431,7 +433,7 @@ const MeshBackground = () => {
       <canvas
         ref={canvasRef}
         className="fixed inset-0 pointer-events-none"
-        style={{ zIndex: 1 }}
+        style={{ zIndex: -1 }}
         aria-hidden="true"
       />
     </>
