@@ -25,9 +25,9 @@ const experienceData = [
   {
     id: 1,
     company: "Simplify Art",
-    position: "UI/UX Designer",
+    position: "Graphic Designer",
     period: "Mar 2025 - Present",
-    description: "Working as a UI/UX Designer at Simplify Art since March 2025, creating visually appealing designs and enhancing user experiences through creative graphics and layouts.",
+    description: "Working as a Graphic Designer at Simplify Art since March 2025, creating visually appealing designs and enhancing user experiences through creative graphics and layouts.",
     url: "https://www.instagram.com/simplify.art.lk"
   },
   {
@@ -41,9 +41,9 @@ const experienceData = [
   {
     id: 3,
     company: "Fiverr",
-    position: "Freelance UI/UX Designer",
+    position: "Freelance Graphic Designer",
     period: "Jun 2022 - Sep 2023",
-    description: "Freelance UI/UX Designer on Fiverr, creating custom designs and user interfaces for clients worldwide.",
+    description: "Freelance Graphic Designer on Fiverr, creating custom designs and visual content for clients worldwide.",
     url: "https://www.fiverr.com"
   }
 ];
