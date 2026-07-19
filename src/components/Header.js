@@ -138,14 +138,14 @@ const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t border-black/5 dark:border-white/5 bg-white dark:bg-dark-bg"
           >
-            <nav className="flex flex-col gap-2 px-6 py-4">
+            <nav className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 px-6 py-6">
               {navItems.map((item) => (
                 item.label === "Contact me" ? (
                   <a
                     key={item.label}
                     href={item.href}
                     onClick={handleNavClick(item)}
-                    className="text-xs font-semibold text-white dark:text-gray-900 py-2 px-4 rounded-full bg-gray-900 dark:bg-white text-center shadow-sm block w-full mt-2"
+                    className="text-xs font-semibold text-white dark:text-gray-900 py-1.5 px-4 rounded-full bg-gray-900 dark:bg-white text-center shadow-sm inline-block"
                   >
                     {item.label}
                   </a>
@@ -154,7 +154,7 @@ const Header = () => {
                     key={item.label}
                     href={item.href}
                     onClick={handleNavClick(item)}
-                    className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white py-2 block border-b border-black/[0.02] dark:border-white/[0.02]"
+                    className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white py-1 inline-block"
                   >
                     {item.label}
                   </a>
