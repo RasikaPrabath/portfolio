@@ -16,8 +16,8 @@ const Hero = () => {
 
   const typedText = useTypingEffect(skills, 100, 50, 2000);
   return (
-    <section id="home" className="relative flex items-center overflow-hidden pt-4">
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 md:px-12 pt-16 pb-4 sm:pt-20 sm:pb-16 w-full">
+    <section id="home" className="relative flex items-center overflow-hidden pt-8 sm:pt-12">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 md:px-12 pt-28 sm:pt-36 pb-4 sm:pb-16 w-full">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
 
           {/* Profile Image (Right/Top on Mobile) */}
