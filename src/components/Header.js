@@ -153,9 +153,9 @@ const Header = () => {
         }
       `}</style>
       <motion.header
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-white/70 dark:bg-dark-card/70 border-b border-black/5 dark:border-white/5 py-3 px-4 sm:px-6 md:px-8 backdrop-blur-xl"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-between gap-1 sm:gap-4 bg-white/70 dark:bg-dark-card/70 border border-black/5 dark:border-white/5 shadow-lg rounded-full py-2 px-3.5 sm:py-2.5 sm:px-5.5 backdrop-blur-xl w-[96%] xs:w-auto max-w-max"
+        initial={{ y: -100, x: "-50%" }}
+        animate={{ y: 0, x: "-50%" }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         {/* Logo/Name */}
@@ -188,6 +188,9 @@ const Header = () => {
             );
           })}
         </nav>
+
+        {/* Vertical separator */}
+        <div className="w-[1px] h-5 sm:h-6 bg-black/10 dark:bg-white/10 mx-1 sm:mx-3 flex-shrink-0" />
 
         {/* Theme Toggle Button */}
         <motion.button
