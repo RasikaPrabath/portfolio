@@ -160,7 +160,7 @@ const Header = () => {
       >
         {/* Logo/Name */}
         <div
-          className="text-lg sm:text-xl font-bold flex items-baseline text-gray-900 dark:text-white tracking-tight flex-shrink-0"
+          className="hidden sm:flex text-lg sm:text-xl font-bold items-baseline text-gray-900 dark:text-white tracking-tight flex-shrink-0"
           style={{ fontFamily: "'Syne', sans-serif" }}
         >
           Rasika
