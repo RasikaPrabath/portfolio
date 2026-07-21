@@ -5,13 +5,13 @@ import profileImg from "../images/profile.jpg";
 
 const Hero = () => {
   const skills = [
-    "Software Automation",
     "Full Stack Developer",
-    "MERN Stack Developer",
+    "Next.js & .NET Developer",
+    "Software Engineer",
     "UI/UX Engineer",
     "QA Engineer",
-    "Web Developer",
-    "Software Engineer"
+    "Software Automation",
+    "Web Developer"
   ];
 
   const typedText = useTypingEffect(skills, 100, 50, 2000);
@@ -108,7 +108,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light"
             >
-              Dedicated IT undergraduate with a solid foundation in software engineering and quality assurance. Skilled in MERN stack development and software testing, with a passion for building clean, efficient, and user-centric web applications.
+              Dedicated IT undergraduate with a solid foundation in software engineering and quality assurance. Skilled in Next.js frontend and .NET backend development, with a passion for building clean, efficient, and user-centric web applications.
             </motion.p>
 
             {/* CTA Buttons */}

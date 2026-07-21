@@ -3,6 +3,19 @@ import profileImage from "../images/234.jpeg";
 
 const TechIcon = ({ name }) => {
   const icons = {
+    "Next.js": (
+      <svg viewBox="0 0 24 24" className="w-full h-full text-black dark:text-white">
+        <circle cx="12" cy="12" r="11" fill="currentColor"/>
+        <path d="M17 18.5L9.5 8.8V16h1.2V10l6.2 8.1c.3-.3.6-.6.8-.9z" className="fill-white dark:fill-black" />
+        <rect x="13.8" y="8.8" width="1.2" height="7.2" className="fill-white dark:fill-black" />
+      </svg>
+    ),
+    ".NET": (
+      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-[#512BD4]">
+        <circle cx="12" cy="12" r="11" fill="currentColor"/>
+        <text x="12" y="15" fill="white" fontSize="9" fontWeight="bold" fontFamily="sans-serif" textAnchor="middle">.NET</text>
+      </svg>
+    ),
     "React": (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-[#61DAFB]">
         <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85S10.13 13 10.13 12c0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 0 1-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68 0 1.69-1.83 2.93-4.37 3.68.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.38 1.95-1.46-.84-1.62-3.05-1-5.63-2.54-.75-4.37-1.99-4.37-3.68 0-1.69 1.83-2.93 4.37-3.68-.62-2.58-.46-4.79 1-5.63 1.47-.84 3.46.12 5.38 1.95 1.92-1.83 3.91-2.79 5.37-1.95M17.08 12c.34.75.64 1.5.89 2.26 2.1-.63 3.28-1.53 3.28-2.26 0-.73-1.18-1.63-3.28-2.26-.25.76-.55 1.51-.89 2.26M6.92 12c-.34-.75-.64-1.5-.89-2.26-2.1.63-3.28 1.53-3.28 2.26 0 .73 1.18 1.63 3.28 2.26.25-.76.55-1.51.89-2.26m9.11 0c.32-.68.59-1.36.81-2.04-.26-.07-.54-.13-.81-.19l-.79 1.42zm-10.06 0c-.32.68-.59 1.36-.81 2.04.26.07.54.13.81.19.07-.3.18-.8.79-1.42l-.79-1.42z"/>
@@ -95,21 +108,21 @@ const TechIcon = ({ name }) => {
 
 const About = () => {
   const technologies = [
+    { name: "Next.js" },
+    { name: ".NET" },
     { name: "React" },
-    { name: "Node.js" },
     { name: "JavaScript" },
-    { name: "Python" },
-    { name: "Java" },
+    { name: "Tailwind" },
+    { name: "Node.js" },
     { name: "MongoDB" },
     { name: "MySQL" },
+    { name: "Java" },
+    { name: "PHP" },
+    { name: "Python" },
     { name: "Git" },
-    { name: "VS Code" },
     { name: "Figma" },
     { name: "HTML" },
     { name: "CSS" },
-    { name: "Tailwind" },
-    { name: "Firebase" },
-    { name: "PHP" },
   ];
 
   return (
@@ -152,7 +165,7 @@ const About = () => {
             <h3 className="text-xs font-semibold mb-2 uppercase tracking-widest text-gray-500 dark:text-gray-400">Introduction</h3>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight font-display">About me</h2>
             <p className="text-sm sm:text-base leading-relaxed text-gray-600 dark:text-gray-400 max-w-2xl font-light">
-              I specialize in building modular, clean, and reliable web applications. With a solid background in Computing and Information Systems, I develop full-stack platforms using modern ecosystems like <span className="text-gray-900 dark:text-white font-medium">React, Next.js, and Node.js</span>. I am also deeply interested in quality assurance and automated testing, ensuring code elegance and robust reliability across all deliverables.
+              I specialize in building modular, clean, and reliable web applications. With a solid background in Computing and Information Systems, I develop full-stack platforms using modern ecosystems like <span className="text-gray-900 dark:text-white font-medium">Next.js and .NET</span>. I am also deeply interested in quality assurance and automated testing, ensuring code elegance and robust reliability across all deliverables.
             </p>
           </motion.div>
         </motion.div>
@@ -173,7 +186,7 @@ const About = () => {
               </svg>
             </div>
             <h3 className="text-base font-bold mb-1 text-gray-900 dark:text-white tracking-tight">Languages</h3>
-            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">HTML, CSS, JavaScript, PHP, C, Java, React, Next.js</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">HTML, CSS, JavaScript, PHP, C#, Java, React, Next.js, .NET</p>
           </motion.div>
 
           {/* Education Card */}

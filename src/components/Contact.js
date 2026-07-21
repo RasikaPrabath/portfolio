@@ -79,8 +79,8 @@ const Contact = () => {
     {
       icon: "📞",
       label: "Phone",
-      value: "+94 0703348191",
-      href: "tel:+940703348191"
+      value: "+94 70 334 8191",
+      href: "tel:+94703348191"
     },
     {
       icon: "📍",
