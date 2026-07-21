@@ -10,7 +10,7 @@ const educationData = [
     institution: "SLIIT (Sri Lanka Institute of Information Technology)",
     degree: "Bachelor of Information Technology",
     duration: "2023 - Present",
-    description: "Pursuing degree in Information Technology with focus on software development, web technologies, and modern programming paradigms."
+    description: "Pursuing a degree in Information Technology with a focus on software development, web technologies, and modern programming paradigms. Key academic achievements include designing and implementing the Appointment Management module for the Osethra Hospital Management System, and engineering the User Management and security architecture for the UniShare resource-sharing platform."
   },
   {
     id: 2,
