@@ -76,7 +76,7 @@
     font-weight: 400;
   }
 
-  body.dark {
+  .dark body {
     color: #94A3B8;
     background-color: #07090E;
   }
@@ -98,12 +98,12 @@
     color: #111827;
   }
 
-  body.dark h1,
-  body.dark h2,
-  body.dark h3,
-  body.dark h4,
-  body.dark h5,
-  body.dark h6 {
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6 {
     color: #FFFFFF;
   }
 
