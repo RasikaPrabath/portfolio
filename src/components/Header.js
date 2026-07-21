@@ -153,7 +153,7 @@ const Header = () => {
         }
       `}</style>
       <motion.header
-        className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-between gap-1 sm:gap-4 bg-white/70 dark:bg-dark-card/70 border border-black/5 dark:border-white/5 shadow-lg rounded-full py-2 px-3.5 sm:py-2.5 sm:px-5.5 backdrop-blur-xl w-[96%] xs:w-auto max-w-max"
+        className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-between gap-1 bg-white/80 dark:bg-dark-card/85 border border-black/10 dark:border-white/10 shadow-xl rounded-full py-1.5 px-2.5 sm:py-2 sm:px-4 backdrop-blur-xl w-[96%] xs:w-auto max-w-max transition-all duration-300"
         initial={{ y: -100, x: "-50%" }}
         animate={{ y: 0, x: "-50%" }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -168,7 +168,7 @@ const Header = () => {
         </div>
 
         {/* Navigation tabs */}
-        <nav className="flex items-center gap-1 sm:gap-2 overflow-x-auto no-scrollbar whitespace-nowrap max-w-full px-2 mx-4">
+        <nav className="flex items-center gap-0.5 sm:gap-1.5 md:gap-2 overflow-x-hidden no-scrollbar whitespace-nowrap max-w-full px-1 sm:px-2 mx-1 sm:mx-4">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
@@ -176,10 +176,10 @@ const Header = () => {
                 key={item.label}
                 href={item.href}
                 onClick={handleNavClick(item.href)}
-                className={`flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-semibold rounded-full border transition-all duration-300 flex-shrink-0 ${
+                className={`flex items-center gap-1 px-2 py-1.5 sm:gap-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-sm font-semibold rounded-full border transition-all duration-300 flex-shrink-0 ${
                   isActive
-                    ? "bg-indigo-500/10 border-indigo-500/30 text-indigo-600 dark:text-indigo-400 shadow-sm"
-                    : "border border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                    ? "bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-600/20 dark:bg-indigo-500 dark:border-indigo-500 dark:shadow-indigo-500/30"
+                    : "border border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/[0.03] dark:hover:bg-white/[0.03]"
                 }`}
               >
                 {item.icon}
