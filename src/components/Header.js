@@ -153,13 +153,22 @@ const Header = () => {
         }
       `}</style>
       <motion.header
-        className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-between gap-1 sm:gap-4 bg-white/70 dark:bg-dark-card/70 border border-black/5 dark:border-white/5 shadow-lg rounded-full py-2 px-3.5 sm:py-2.5 sm:px-5.5 backdrop-blur-xl w-[96%] xs:w-auto max-w-max"
-        initial={{ y: -100, x: "-50%" }}
-        animate={{ y: 0, x: "-50%" }}
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-white/70 dark:bg-dark-card/70 border-b border-black/5 dark:border-white/5 py-3 px-4 sm:px-6 md:px-8 backdrop-blur-xl"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
+        {/* Logo/Name */}
+        <div
+          className="text-lg sm:text-xl font-bold flex items-baseline text-gray-900 dark:text-white tracking-tight flex-shrink-0"
+          style={{ fontFamily: "'Syne', sans-serif" }}
+        >
+          Rasika
+          <span className="rounded-full bg-gray-900 dark:bg-white ml-1 mb-0.5" style={{ width: '4px', height: '4px' }} />
+        </div>
+
         {/* Navigation tabs */}
-        <nav className="flex items-center gap-0.5 sm:gap-2 overflow-x-auto no-scrollbar whitespace-nowrap max-w-full px-1">
+        <nav className="flex items-center gap-1 sm:gap-2 overflow-x-auto no-scrollbar whitespace-nowrap max-w-full px-2 mx-4">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
@@ -167,10 +176,10 @@ const Header = () => {
                 key={item.label}
                 href={item.href}
                 onClick={handleNavClick(item.href)}
-                className={`flex items-center gap-1.5 px-2 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-sm font-semibold rounded-full border transition-all duration-300 flex-shrink-0 ${
+                className={`flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-semibold rounded-full border transition-all duration-300 flex-shrink-0 ${
                   isActive
                     ? "bg-indigo-500/10 border-indigo-500/30 text-indigo-600 dark:text-indigo-400 shadow-sm"
-                    : "bg-black/[0.02] dark:bg-white/[0.02] border-black/5 dark:border-white/5 hover:bg-black/5 dark:hover:bg-white/5 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                    : "border border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
                 }`}
               >
                 {item.icon}
@@ -180,13 +189,10 @@ const Header = () => {
           })}
         </nav>
 
-        {/* Vertical separator */}
-        <div className="w-[1px] h-5 sm:h-6 bg-black/10 dark:bg-white/10 mx-1 sm:mx-3 flex-shrink-0" />
-
         {/* Theme Toggle Button */}
         <motion.button
           onClick={() => setIsDark(!isDark)}
-          className="relative flex h-7 w-7 sm:h-9 sm:w-9 items-center justify-center rounded-full text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors flex-shrink-0"
+          className="relative flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors flex-shrink-0"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}
