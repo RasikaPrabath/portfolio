@@ -71,7 +71,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
     color: #4B5563;
     /* background handled by MeshBackground canvas layer, base set to match theme */
-    background-color: #030508;
+    background-color: #e6e9f6;
     line-height: 1.65;
     font-weight: 400;
   }
