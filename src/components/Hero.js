@@ -6,7 +6,6 @@ import profileImg from "../images/profile.jpg";
 const Hero = () => {
   const skills = [
     "Full Stack Developer",
-    "Next.js & .NET Developer",
     "Software Engineer",
     "UI/UX Engineer",
     "QA Engineer",
