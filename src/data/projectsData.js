@@ -20,7 +20,7 @@ const projectsData = [
       "NextAuth.js"
     ],
     image: luxuryImg,
-    github: "https://github.com/rasikaprabath12345/Luxury-Cloths-Project",
+    github: "https://github.com/RasikaPrabath/Luxury-Cloths-Project",
     client: "Personal Showcase",
     duration: "2 Months",
     teamSize: "Individual Project",
@@ -92,7 +92,7 @@ const projectsData = [
       ".NET Core Clean Architecture"
     ],
     image: traveleaseImg,
-    github: "https://github.com/rasikaprabath12345/TravelEaseLK",
+    github: "https://github.com/RasikaPrabath/TravelEaseLK.git",
     client: "Personal Showcase",
     duration: "2 Months",
     teamSize: "Individual Project",
