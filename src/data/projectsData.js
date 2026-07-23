@@ -31,29 +31,27 @@ const projectsData = [
     solution: "Created a headless architecture with Next.js 15 for lightning-fast customer interface response times and ASP.NET Core on SQL Server to securely execute backend business logic."
   },
   {
-    id: 2,
-    type: "Healthcare",
-    title: "Osethra - Full-Stack Hospital Management System",
-    description: "Developed 'Osethra,' a comprehensive Full-Stack Hospital Management System designed to streamline internal hospital operations and administrative workflows. Engineered using the MERN stack and Material UI, the system features a secure, role-based architecture specifically tailored for hospital staff.",
+    id: 4,
+    type: "Travel",
+    title: "TravelEase - Tour Booking & Travel Management Platform",
+    description: "A full-stack travel and tour booking platform designed to make exploring Sri Lanka easier and more enjoyable. Features destination discovery, online booking management, customer dashboard for reservations, and admin panel.",
     techStack: [
-      "React.js",
-      "Node.js",
-      "MongoDB",
-      "Express.js",
-      "Material-UI (MUI)",
-      "MERN Stack",
-      "RESTful APIs"
+      "Next.js",
+      "ASP.NET Core",
+      "SQL Server",
+      "C#",
+      ".NET Core Clean Architecture"
     ],
-    image: osethraImg,
-    github: "https://github.com/Nilan1979/Osethra",
-    client: "SLIIT (Academic)",
-    duration: "3 Months",
-    teamSize: "Group Project (4 Members)",
-    year: "2024",
-    role: "Lead Developer (Appointment Management)",
-    overview: "Osethra is a comprehensive Full-Stack Hospital Management System designed to streamline healthcare administration. It integrates different portals for doctors, patients, and administrators to facilitate smoother workflow scheduling and clinical updates.",
-    problem: "Traditional hospital workflows rely on fragmented booking methods, causing long waiting queues, overlapping doctor schedules, and delayed communication.",
-    solution: "Designed and implemented the core Appointment Management module. This system automates doctor slot scheduling, registers user bookings, tracks queue status, and provides an intuitive dashboard for hospital desk staff to verify appointments, resulting in a 40% reduction in patient waiting times."
+    image: traveleaseImg,
+    github: "https://github.com/RasikaPrabath/TravelEaseLK.git",
+    client: "Personal Showcase",
+    duration: "2 Months",
+    teamSize: "Individual Project",
+    year: "2025",
+    role: "Full-Stack Developer",
+    overview: "TravelEase is a full-stack tour booking and travel management platform designed to make exploring Sri Lanka easier and more enjoyable. It features destination discovery, online booking management, customer dashboards, and an admin panel.",
+    problem: "Tour operators and travelers lack a unified system for live itinerary customization, tour booking, and direct coordinator communication.",
+    solution: "Built a .NET Core clean architecture backend paired with a responsive Next.js frontend, providing seamless reservation tracking, live dashboards, and a robust admin panel."
   },
   {
     id: 3,
@@ -80,27 +78,29 @@ const projectsData = [
     solution: "Developed the complete User Management system featuring secure JWT authentication, registration, password hashing, and dynamic role-based access controls. This ensures that administrators, lecturers, and students have secure and appropriate access levels, keeping intellectual and student data fully protected."
   },
   {
-    id: 4,
-    type: "Travel",
-    title: "TravelEase - Tour Booking & Travel Management Platform",
-    description: "A full-stack travel and tour booking platform designed to make exploring Sri Lanka easier and more enjoyable. Features destination discovery, online booking management, customer dashboard for reservations, and admin panel.",
+    id: 2,
+    type: "Healthcare",
+    title: "Osethra - Full-Stack Hospital Management System",
+    description: "Developed 'Osethra,' a comprehensive Full-Stack Hospital Management System designed to streamline internal hospital operations and administrative workflows. Engineered using the MERN stack and Material UI, the system features a secure, role-based architecture specifically tailored for hospital staff.",
     techStack: [
-      "Next.js",
-      "ASP.NET Core",
-      "SQL Server",
-      "C#",
-      ".NET Core Clean Architecture"
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Material-UI (MUI)",
+      "MERN Stack",
+      "RESTful APIs"
     ],
-    image: traveleaseImg,
-    github: "https://github.com/RasikaPrabath/TravelEaseLK.git",
-    client: "Personal Showcase",
-    duration: "2 Months",
-    teamSize: "Individual Project",
-    year: "2025",
-    role: "Full-Stack Developer",
-    overview: "TravelEase is a full-stack tour booking and travel management platform designed to make exploring Sri Lanka easier and more enjoyable. It features destination discovery, online booking management, customer dashboards, and an admin panel.",
-    problem: "Tour operators and travelers lack a unified system for live itinerary customization, tour booking, and direct coordinator communication.",
-    solution: "Built a .NET Core clean architecture backend paired with a responsive Next.js frontend, providing seamless reservation tracking, live dashboards, and a robust admin panel."
+    image: osethraImg,
+    github: "https://github.com/Nilan1979/Osethra",
+    client: "SLIIT (Academic)",
+    duration: "3 Months",
+    teamSize: "Group Project (4 Members)",
+    year: "2024",
+    role: "Lead Developer (Appointment Management)",
+    overview: "Osethra is a comprehensive Full-Stack Hospital Management System designed to streamline healthcare administration. It integrates different portals for doctors, patients, and administrators to facilitate smoother workflow scheduling and clinical updates.",
+    problem: "Traditional hospital workflows rely on fragmented booking methods, causing long waiting queues, overlapping doctor schedules, and delayed communication.",
+    solution: "Designed and implemented the core Appointment Management module. This system automates doctor slot scheduling, registers user bookings, tracks queue status, and provides an intuitive dashboard for hospital desk staff to verify appointments, resulting in a 40% reduction in patient waiting times."
   }
 ];
 
