@@ -1,5 +1,5 @@
 const sharp = require('sharp');
-const pngToIco = require('png-to-ico');
+const pngToIco = require('png-to-ico').default || require('png-to-ico');
 const fs = require('fs');
 
 async function processImage() {
@@ -19,43 +19,18 @@ async function processImage() {
       })
       .toBuffer();
       
-    // Function to create a circular image of a given size
-    const createCircularImage = async (sizePx, outputPath) => {
-      const circleSvg = `<svg width="${sizePx}" height="${sizePx}"><circle cx="${sizePx / 2}" cy="${sizePx / 2}" r="${sizePx / 2}" fill="white"/></svg>`;
-      const circleBuffer = Buffer.from(circleSvg);
-      
-      const resized = await sharp(squareBuffer)
-        .resize(sizePx, sizePx)
-        .toBuffer();
-        
-      await sharp(resized)
-        .composite([{
-          input: circleBuffer,
-          blend: 'dest-in'
-        }])
-        .png()
-        .toFile(outputPath);
-      console.log(`Created ${outputPath}`);
-    };
-
     // Create 512x512 and 192x192 logos
-    await createCircularImage(512, './public/logo512.png');
-    await createCircularImage(192, './public/logo192.png');
+    await sharp(squareBuffer).resize(512, 512).png().toFile('./public/logo512.png');
+    console.log('Created ./public/logo512.png');
     
-    // Create 256x256 circular image for favicon to get high quality
+    await sharp(squareBuffer).resize(192, 192).png().toFile('./public/logo192.png');
+    console.log('Created ./public/logo192.png');
+    
+    // Create favicon sizes
     const faviconSize = 256;
-    const circleSvg = `<svg width="${faviconSize}" height="${faviconSize}"><circle cx="${faviconSize / 2}" cy="${faviconSize / 2}" r="${faviconSize / 2}" fill="white"/></svg>`;
-    const circleBuffer = Buffer.from(circleSvg);
     
-    const resizedFavicon = await sharp(squareBuffer)
+    const faviconPngBuffer = await sharp(squareBuffer)
       .resize(faviconSize, faviconSize)
-      .toBuffer();
-      
-    const faviconPngBuffer = await sharp(resizedFavicon)
-      .composite([{
-        input: circleBuffer,
-        blend: 'dest-in'
-      }])
       .png()
       .toBuffer();
       
