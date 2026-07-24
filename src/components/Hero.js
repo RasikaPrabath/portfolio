@@ -31,18 +31,18 @@ const Hero = () => {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="relative w-48 h-48 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px]"
             >
-              {/* Blur backdrop light */}
-              <div className="absolute inset-0 -m-3 sm:-m-6 lg:-m-8">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-black/5 to-black/10 dark:from-white/5 dark:to-white/10 blur-3xl" />
+              {/* Subtle Professional Glow */}
+              <div className="absolute inset-0 -m-2 sm:-m-4 lg:-m-6">
+                <div className="w-full h-full rounded-full bg-slate-300/30 dark:bg-slate-700/20 blur-2xl" />
               </div>
 
-              {/* Spinning dashed circle */}
-              <div className="absolute inset-0 -m-4 sm:-m-8 lg:-m-12 animate-spin-slow">
-                <div className="w-full h-full rounded-full border-2 border-dashed border-black/10 dark:border-white/10" />
+              {/* Elegant Minimal Rotating Ring */}
+              <div className="absolute inset-0 -m-4 sm:-m-6 lg:-m-8 animate-[spin_20s_linear_infinite]">
+                <div className="w-full h-full rounded-full border-[1.5px] border-dashed border-slate-300/80 dark:border-slate-600/60" />
               </div>
 
-              {/* Circular Image Container */}
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 sm:border-6 lg:border-8 border-black/5 dark:border-white/10 shadow-xl">
+              {/* Sleek Image Container */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-[4px] lg:border-[6px] border-white dark:border-[#121212] shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgba(255,255,255,0.03)] bg-white dark:bg-[#121212]">
                 <img
                   src={profileImg}
                   alt="Rasika Prabath"
