@@ -19,17 +19,24 @@ async function processImage() {
       })
       .toBuffer();
       
+    // Create a circular SVG mask and apply it
+    const circleSvg = `<svg width="${size}" height="${size}"><circle cx="${size/2}" cy="${size/2}" r="${size/2}" /></svg>`;
+    const circleBuffer = await sharp(squareBuffer)
+      .composite([{ input: Buffer.from(circleSvg), blend: 'dest-in' }])
+      .png()
+      .toBuffer();
+      
     // Create 512x512 and 192x192 logos
-    await sharp(squareBuffer).resize(512, 512).png().toFile('./public/logo512.png');
+    await sharp(circleBuffer).resize(512, 512).png().toFile('./public/logo512.png');
     console.log('Created ./public/logo512.png');
     
-    await sharp(squareBuffer).resize(192, 192).png().toFile('./public/logo192.png');
+    await sharp(circleBuffer).resize(192, 192).png().toFile('./public/logo192.png');
     console.log('Created ./public/logo192.png');
     
     // Create favicon sizes
     const faviconSize = 256;
     
-    const faviconPngBuffer = await sharp(squareBuffer)
+    const faviconPngBuffer = await sharp(circleBuffer)
       .resize(faviconSize, faviconSize)
       .png()
       .toBuffer();
