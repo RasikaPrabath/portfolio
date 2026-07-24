@@ -31,18 +31,19 @@ const Hero = () => {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="relative w-48 h-48 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px]"
             >
-              {/* Subtle Professional Glow */}
-              <div className="absolute inset-0 -m-2 sm:-m-4 lg:-m-6">
-                <div className="w-full h-full rounded-full bg-slate-300/30 dark:bg-slate-700/20 blur-2xl" />
+              {/* Elegant Indigo & Emerald Glow */}
+              <div className="absolute inset-0 -m-3 sm:-m-5 lg:-m-8">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-indigo-500/15 via-transparent to-emerald-500/15 dark:from-indigo-400/20 dark:to-emerald-400/20 blur-2xl" />
               </div>
 
-              {/* Elegant Minimal Rotating Ring */}
-              <div className="absolute inset-0 -m-4 sm:-m-6 lg:-m-8 animate-[spin_20s_linear_infinite]">
-                <div className="w-full h-full rounded-full border-[1.5px] border-dashed border-slate-300/80 dark:border-slate-600/60" />
+              {/* Sophisticated Spinning Dashed Ring */}
+              <div className="absolute inset-0 -m-4 sm:-m-6 lg:-m-8 animate-[spin_15s_linear_infinite]">
+                <div className="w-full h-full rounded-full border-2 border-dashed border-indigo-500/40 dark:border-emerald-400/40" />
               </div>
 
-              {/* Sleek Image Container */}
-              <div className="relative w-full h-full rounded-full overflow-hidden border-[4px] lg:border-[6px] border-white dark:border-[#121212] shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgba(255,255,255,0.03)] bg-white dark:bg-[#121212]">
+              {/* Charming Gradient Image Container */}
+              <div className="relative w-full h-full rounded-full p-1 sm:p-1.5 lg:p-2 bg-gradient-to-br from-indigo-500/80 to-emerald-500/80 shadow-lg">
+                <div className="w-full h-full rounded-full overflow-hidden border-[3px] lg:border-4 border-white dark:border-[#121212] bg-white dark:bg-[#121212]">
                 <img
                   src={profileImg}
                   alt="Rasika Prabath"
@@ -56,6 +57,7 @@ const Hero = () => {
                 <div className="absolute inset-0" style={{ display: 'none' }}>
                   <DefaultAvatar name="RP" size="full" />
                 </div>
+              </div>
               </div>
             </motion.div>
           </motion.div>
