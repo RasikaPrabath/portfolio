@@ -46,7 +46,8 @@ const Hero = () => {
                 <div className="w-full h-full rounded-full overflow-hidden border-[3px] lg:border-4 border-white dark:border-[#121212] bg-white dark:bg-[#121212]">
                 <img
                   src={profileImg}
-                  alt="Rasika Prabath"
+                  alt="Rasika Prabath - Software Engineer & UI/UX Designer"
+                  itemProp="image"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   onError={(e) => {
                     e.target.style.display = 'none';
