@@ -121,8 +121,8 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8"
             >
               <motion.a
-                href={process.env.PUBLIC_URL + "/resume.pdf"}
-                download="Rasika_Prabath_CV.pdf"
+                href={process.env.PUBLIC_URL + "/Rasika_Prabath_SE.pdf"}
+                download="Rasika_Prabath_SE.pdf"
                 className="btn-primary"
                 whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.98 }}
