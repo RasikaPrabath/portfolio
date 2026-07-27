@@ -79,6 +79,15 @@ const certificatesData = [
   },
   {
     id: 2,
+    title: "Rest API (Intermediate)",
+    organization: "HackerRank (ID: 065D3204E3B2)",
+    year: "2026",
+    link: "https://www.hackerrank.com/certificates/065d3204e3b2",
+    pdf: process.env.PUBLIC_URL + "/certificates/hackerrank_rest_api.pdf",
+    image: require("../images/hackerrank_rest_api.png")
+  },
+  {
+    id: 3,
     title: "Python for Beginners",
     organization: "University of Moratuwa (Code: kI0d7OfRGV)",
     year: "2026",
@@ -87,7 +96,7 @@ const certificatesData = [
     image: require("../images/uom_python.png")
   },
   {
-    id: 3,
+    id: 4,
     title: "AI/ML Engineer - Stage 2",
     organization: "SLIIT (Centre for Open and Distance Education)",
     year: "2026",
@@ -96,7 +105,7 @@ const certificatesData = [
     image: require("../images/sliit_aiml_stage2.png")
   },
   {
-    id: 4,
+    id: 5,
     title: "AI/ML Engineer - Stage 1",
     organization: "SLIIT (Centre for Open and Distance Education)",
     year: "2026",
@@ -105,7 +114,7 @@ const certificatesData = [
     image: require("../images/sliit_aiml_stage1.png")
   },
   {
-    id: 5,
+    id: 6,
     title: "MongoDB Atlas Administrator Path",
     organization: "MongoDB",
     year: "2026",
@@ -114,7 +123,7 @@ const certificatesData = [
     image: require("../images/mongodb_admin.png")
   },
   {
-    id: 6,
+    id: 7,
     title: "MongoDB Atlas Security",
     organization: "MongoDB",
     year: "2026",
@@ -123,7 +132,7 @@ const certificatesData = [
     image: require("../images/mongodb_security.png")
   },
   {
-    id: 7,
+    id: 8,
     title: "MongoDB Database Metrics & Monitoring",
     organization: "MongoDB",
     year: "2026",
@@ -132,7 +141,7 @@ const certificatesData = [
     image: require("../images/mongodb_metrics.png")
   },
   {
-    id: 8,
+    id: 9,
     title: "Getting Started with MongoDB Atlas",
     organization: "MongoDB",
     year: "2026",
