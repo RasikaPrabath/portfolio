@@ -121,33 +121,6 @@ const certificatesData = [
     link: "https://learn.mongodb.com/c/MDBchg9ouyquk",
     pdf: process.env.PUBLIC_URL + "/certificates/mongodb_admin.pdf",
     image: require("../images/mongodb_admin.png")
-  },
-  {
-    id: 7,
-    title: "MongoDB Atlas Security",
-    organization: "MongoDB",
-    year: "2026",
-    link: "https://learn.mongodb.com/c/MDByfujc6aq57",
-    pdf: process.env.PUBLIC_URL + "/certificates/mongodb_security.pdf",
-    image: require("../images/mongodb_security.png")
-  },
-  {
-    id: 8,
-    title: "MongoDB Database Metrics & Monitoring",
-    organization: "MongoDB",
-    year: "2026",
-    link: "https://learn.mongodb.com/c/MDB9r7fff86rk",
-    pdf: process.env.PUBLIC_URL + "/certificates/mongodb_metrics.pdf",
-    image: require("../images/mongodb_metrics.png")
-  },
-  {
-    id: 9,
-    title: "Getting Started with MongoDB Atlas",
-    organization: "MongoDB",
-    year: "2026",
-    link: "https://learn.mongodb.com/c/MDB14smylcgpx",
-    pdf: process.env.PUBLIC_URL + "/certificates/mongodb_getting_started.pdf",
-    image: require("../images/mongodb_getting_started.png")
   }
 ];
 
