@@ -106,7 +106,7 @@ const projectsData = [
   },
   {
     id: 5,
-    type: "Upcoming • FinTech",
+    type: "FinTech",
     title: "PulseFin - Intelligent Wealth & Digital Banking Dashboard",
     description: "A state-of-the-art modern financial management portal featuring interactive analytics widgets, real-time balances, and decentralized transaction insight tracking.",
     techStack: [
@@ -118,20 +118,20 @@ const projectsData = [
       "Prisma"
     ],
     image: upcomingFintechImg,
-    github: null,
+    github: "https://github.com/RasikaPrabath/PulseFin-Platform",
     link: null,
-    client: "Upcoming Demo Project",
-    duration: "In Progress (2026)",
+    client: "Personal Showcase",
+    duration: "2 Months",
     teamSize: "Individual Project",
     year: "2026",
     role: "Full-Stack Architect",
-    overview: "PulseFin is an upcoming comprehensive digital banking and wealth analytics ecosystem. Designed with rich dark-mode aesthetics and reactive financial chart integrations, it unites fragmented financial portfolio monitoring into a clean, modern user dashboard.",
+    overview: "PulseFin is a comprehensive digital banking and wealth analytics ecosystem. Designed with rich dark-mode aesthetics and reactive financial chart integrations, it unites fragmented financial portfolio monitoring into a clean, modern user dashboard.",
     problem: "Existing personal wealth tools often suffer from bloated legacy UX, slow data visualization libraries, and disconnected crypto and fiat data streams.",
-    solution: "Developing a highly optimized TypeScript Next.js web application utilizing edge serverless functions and real-time interactive analytics widgets for intuitive financial insights."
+    solution: "Developed a highly optimized TypeScript Next.js web application utilizing edge serverless functions and real-time interactive analytics widgets for intuitive financial insights."
   },
   {
     id: 6,
-    type: "Upcoming • AI / SaaS",
+    type: "AI / SaaS",
     title: "CogniSphere - Generative AI Workspace & Knowledge Engine",
     description: "An intelligent productivity and collaboration platform powered by Retrieval-Augmented Generation (RAG), automated document synthesis cards, and modular task workflows.",
     techStack: [
@@ -143,16 +143,16 @@ const projectsData = [
       "Tailwind CSS"
     ],
     image: upcomingAiImg,
-    github: null,
+    github: "https://github.com/RasikaPrabath/CogniSphere-AI-Workspace",
     link: null,
-    client: "Upcoming Demo Project",
-    duration: "In Progress (2026)",
+    client: "Personal Showcase",
+    duration: "2 Months",
     teamSize: "Individual Project",
     year: "2026",
     role: "Full-Stack AI Engineer",
     overview: "CogniSphere represents a new evolution in AI-driven workspaces. By integrating MongoDB Atlas Vector Search and AI microservices with a responsive React frontend, it transforms complex technical documents into an interactive knowledge base.",
     problem: "Modern developers and researchers lose valuable hours navigating siloed documentation and performing manual notes synthesis across distributed teams and projects.",
-    solution: "Implementing an enterprise-grade modular dashboard where generative AI assistants perform real-time contextual semantic search, generate automated summaries, and streamline task progress metrics."
+    solution: "Implemented an enterprise-grade modular dashboard where generative AI assistants perform real-time contextual semantic search, generate automated summaries, and streamline task progress metrics."
   }
 ];
 
