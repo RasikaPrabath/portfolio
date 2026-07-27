@@ -70,6 +70,24 @@ const skillsData = {
 const certificatesData = [
   {
     id: 1,
+    title: "AI/ML Engineer - Stage 2",
+    organization: "SLIIT (Centre for Open and Distance Education)",
+    year: "2026",
+    link: "https://code.sliit.org/certificates/mdk9vmzrk0",
+    pdf: process.env.PUBLIC_URL + "/certificates/sliit_aiml_stage2.pdf",
+    image: require("../images/sliit_aiml_stage2.png")
+  },
+  {
+    id: 2,
+    title: "AI/ML Engineer - Stage 1",
+    organization: "SLIIT (Centre for Open and Distance Education)",
+    year: "2026",
+    link: "https://code.sliit.org/certificates/elolaoxbj0",
+    pdf: process.env.PUBLIC_URL + "/certificates/sliit_aiml_stage1.pdf",
+    image: require("../images/sliit_aiml_stage1.png")
+  },
+  {
+    id: 3,
     title: "MongoDB Atlas Administrator Path",
     organization: "MongoDB",
     year: "2026",
@@ -78,7 +96,7 @@ const certificatesData = [
     image: require("../images/mongodb_admin.png")
   },
   {
-    id: 2,
+    id: 4,
     title: "MongoDB Atlas Security",
     organization: "MongoDB",
     year: "2026",
@@ -87,7 +105,7 @@ const certificatesData = [
     image: require("../images/mongodb_security.png")
   },
   {
-    id: 3,
+    id: 5,
     title: "MongoDB Database Metrics & Monitoring",
     organization: "MongoDB",
     year: "2026",
@@ -96,7 +114,7 @@ const certificatesData = [
     image: require("../images/mongodb_metrics.png")
   },
   {
-    id: 4,
+    id: 6,
     title: "Getting Started with MongoDB Atlas",
     organization: "MongoDB",
     year: "2026",
