@@ -49,7 +49,13 @@ const Projects = () => {
             >
               <div className="h-44 sm:h-48 w-full overflow-hidden rounded-2xl bg-gray-50 dark:bg-dark-hover relative border border-black/5 dark:border-white/5 flex items-center justify-center">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
-                <span className="absolute top-3 left-3 inline-block px-2.5 py-0.5 bg-gray-900/90 dark:bg-white/90 text-white dark:text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm">{project.type}</span>
+                <span className={`absolute top-3 left-3 inline-block px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${
+                  project.type.toLowerCase().includes("upcoming")
+                    ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white animate-pulse"
+                    : "bg-gray-900/90 dark:bg-white/90 text-white dark:text-gray-900"
+                }`}>
+                  {project.type}
+                </span>
               </div>
               <div className="p-3 flex-1 flex flex-col justify-between">
                 <div>
@@ -129,10 +135,16 @@ const Projects = () => {
                 {/* Header Information */}
                 <div className="space-y-2 pr-10">
                   <div className="flex items-center gap-2">
-                    <span className="inline-block px-2.5 py-0.5 bg-gray-100 dark:bg-dark-hover text-gray-800 dark:text-white text-[10px] font-semibold uppercase tracking-wider rounded-full shadow-sm">
+                    <span className={`inline-block px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded-full shadow-sm ${
+                      activeProject.type.toLowerCase().includes("upcoming")
+                        ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+                        : "bg-gray-100 dark:bg-dark-hover text-gray-800 dark:text-white"
+                    }`}>
                       {activeProject.type}
                     </span>
-                    <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest">Case Study</span>
+                    <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
+                      {activeProject.type.toLowerCase().includes("upcoming") ? "Preview & Specs" : "Case Study"}
+                    </span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white tracking-tight">{activeProject.title}</h3>
                   <p className="text-xs sm:text-sm text-gray-650 dark:text-gray-400 leading-relaxed font-light">{activeProject.description}</p>
@@ -180,7 +192,13 @@ const Projects = () => {
                 </div>
 
                 {/* Actions row links */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-black/5 dark:border-white/5 justify-end">
+                <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-black/5 dark:border-white/5 justify-end items-center">
+                  {!activeProject.github && !activeProject.link && (
+                    <span className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-full bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200/50 dark:border-indigo-800/50 w-full justify-center">
+                      <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                      Currently Under Active Development • Coming Soon
+                    </span>
+                  )}
                   {activeProject.github && (
                     <a
                       href={activeProject.github}
