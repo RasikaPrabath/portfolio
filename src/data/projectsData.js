@@ -2,6 +2,8 @@ import luxuryImg from "../images/luxury_store.png";
 import osethraImg from "../images/osethra_hospital.png";
 import unishareImg from "../images/unishare_platform.png";
 import traveleaseImg from "../images/travelease.jpg";
+import upcomingFintechImg from "../images/upcoming_fintech_ui.png";
+import upcomingAiImg from "../images/upcoming_ai_workspace_ui.png";
 
 const projectsData = [
   {
@@ -101,6 +103,56 @@ const projectsData = [
     overview: "Osethra is a comprehensive Full-Stack Hospital Management System designed to streamline healthcare administration. It integrates different portals for doctors, patients, and administrators to facilitate smoother workflow scheduling and clinical updates.",
     problem: "Traditional hospital workflows rely on fragmented booking methods, causing long waiting queues, overlapping doctor schedules, and delayed communication.",
     solution: "Designed and implemented the core Appointment Management module. This system automates doctor slot scheduling, registers user bookings, tracks queue status, and provides an intuitive dashboard for hospital desk staff to verify appointments, resulting in a 40% reduction in patient waiting times."
+  },
+  {
+    id: 5,
+    type: "Upcoming • FinTech",
+    title: "PulseFin - Intelligent Wealth & Digital Banking Dashboard",
+    description: "A state-of-the-art modern financial management portal featuring interactive analytics widgets, real-time balances, and decentralized transaction insight tracking.",
+    techStack: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma"
+    ],
+    image: upcomingFintechImg,
+    github: null,
+    link: null,
+    client: "Upcoming Demo Project",
+    duration: "In Progress (2026)",
+    teamSize: "Individual Project",
+    year: "2026",
+    role: "Full-Stack Architect",
+    overview: "PulseFin is an upcoming comprehensive digital banking and wealth analytics ecosystem. Designed with rich dark-mode aesthetics and reactive financial chart integrations, it unites fragmented financial portfolio monitoring into a clean, modern user dashboard.",
+    problem: "Existing personal wealth tools often suffer from bloated legacy UX, slow data visualization libraries, and disconnected crypto and fiat data streams.",
+    solution: "Developing a highly optimized TypeScript Next.js web application utilizing edge serverless functions and real-time interactive analytics widgets for intuitive financial insights."
+  },
+  {
+    id: 6,
+    type: "Upcoming • AI / SaaS",
+    title: "CogniSphere - Generative AI Workspace & Knowledge Engine",
+    description: "An intelligent productivity and collaboration platform powered by Retrieval-Augmented Generation (RAG), automated document synthesis cards, and modular task workflows.",
+    techStack: [
+      "React 19",
+      "ASP.NET Core 9.0",
+      "MongoDB Atlas",
+      "Python",
+      "OpenAI API",
+      "Tailwind CSS"
+    ],
+    image: upcomingAiImg,
+    github: null,
+    link: null,
+    client: "Upcoming Demo Project",
+    duration: "In Progress (2026)",
+    teamSize: "Individual Project",
+    year: "2026",
+    role: "Full-Stack AI Engineer",
+    overview: "CogniSphere represents a new evolution in AI-driven workspaces. By integrating MongoDB Atlas Vector Search and AI microservices with a responsive React frontend, it transforms complex technical documents into an interactive knowledge base.",
+    problem: "Modern developers and researchers lose valuable hours navigating siloed documentation and performing manual notes synthesis across distributed teams and projects.",
+    solution: "Implementing an enterprise-grade modular dashboard where generative AI assistants perform real-time contextual semantic search, generate automated summaries, and streamline task progress metrics."
   }
 ];
 
