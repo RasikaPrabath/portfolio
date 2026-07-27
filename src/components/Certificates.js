@@ -19,7 +19,7 @@ const Certificates = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white tracking-tight font-display">Certificates</h2>
           <p className="mt-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-light">Professional certifications and achievements</p>
         </motion.div>
-        
+
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {displayedCertificates.map((cert, index) => (
             <motion.div
@@ -34,15 +34,15 @@ const Certificates = () => {
             >
               <div>
                 {cert.image && (
-                  <div className="mb-4 h-44 w-full overflow-hidden rounded-2xl bg-gray-50 dark:bg-dark-hover p-2 border border-black/5 dark:border-white/5 flex items-center justify-center">
+                  <div className="mb-4 w-full h-48 sm:h-52 overflow-hidden rounded-2xl bg-white dark:bg-gray-900 border border-black/5 dark:border-white/5">
                     <img
                       src={cert.image}
                       alt={cert.title}
-                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 )}
-                
+
                 <h3 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white tracking-tight mt-2">{cert.title}</h3>
                 <p className="mt-1 text-xs text-gray-500 dark:text-gray-400 font-light">{cert.organization}</p>
                 <p className="mt-2 text-xs font-semibold text-indigo-600 dark:text-indigo-400">{cert.year}</p>
