@@ -118,7 +118,7 @@ const projectsData = [
       "Prisma"
     ],
     image: upcomingFintechImg,
-    github: "https://github.com/RasikaPrabath/PulseFin-Platform",
+    github: null,
     link: null,
     client: "Personal Showcase",
     duration: "2 Months",
@@ -143,7 +143,7 @@ const projectsData = [
       "Tailwind CSS"
     ],
     image: upcomingAiImg,
-    github: "https://github.com/RasikaPrabath/CogniSphere-AI-Workspace",
+    github: null,
     link: null,
     client: "Personal Showcase",
     duration: "2 Months",
