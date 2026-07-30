@@ -4,7 +4,7 @@ import { certificatesData } from "../data/resumeData";
 
 const Certificates = () => {
   const [showAll, setShowAll] = useState(false);
-  const displayedCertificates = showAll ? certificatesData : certificatesData.slice(0, 3);
+  const displayedCertificates = showAll ? certificatesData : certificatesData.slice(0, 4);
 
   return (
     <section id="certificates" className="relative py-16 bg-transparent">
@@ -20,7 +20,7 @@ const Certificates = () => {
           <p className="mt-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-light">Professional certifications and achievements</p>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {displayedCertificates.map((cert, index) => (
             <motion.div
               key={cert.id}
@@ -35,11 +35,11 @@ const Certificates = () => {
               <div>
                 {cert.image && (
                   <div className="mb-4 w-full h-48 sm:h-52 overflow-hidden rounded-2xl bg-white dark:bg-gray-900 border border-black/5 dark:border-white/5">
-                      <img
-                        src={cert.image?.default || cert.image}
-                        alt={cert.title}
-                        className="h-full w-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
-                      />
+                    <img
+                      src={cert.image?.default || cert.image}
+                      alt={cert.title}
+                      className="h-full w-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                 )}
 
@@ -64,7 +64,7 @@ const Certificates = () => {
           ))}
         </div>
 
-        {!showAll && certificatesData.length > 3 && (
+        {!showAll && certificatesData.length > 4 && (
           <motion.div
             className="mt-12 text-center"
             initial={{ opacity: 0 }}
