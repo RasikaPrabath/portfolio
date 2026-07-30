@@ -69,6 +69,51 @@ const skillsData = {
 
 const certificatesData = [
   {
+    id: 8,
+    title: "Software Engineer",
+    organization: "HackerRank (ID: CE20FFECEE6A)",
+    year: "2026",
+    link: "https://www.hackerrank.com/certificates/ce20ffecee6a",
+    pdf: process.env.PUBLIC_URL + "/certificates/software_engineer certificate.pdf",
+    image: require("../images/se_cert.png")
+  },
+  {
+    id: 7,
+    title: "Frontend Developer (React)",
+    organization: "HackerRank (ID: 6BE09CB97A40)",
+    year: "2026",
+    link: "https://www.hackerrank.com/certificates/6be09cb97a40",
+    pdf: process.env.PUBLIC_URL + "/certificates/frontend_developer_react certificate.pdf",
+    image: require("../images/frontend_react_cert.png")
+  },
+  {
+    id: 5,
+    title: "AI/ML Engineer - Stage 1",
+    organization: "SLIIT (Centre for Open and Distance Education)",
+    year: "2026",
+    link: "https://code.sliit.org/certificates/elolaoxbj0",
+    pdf: process.env.PUBLIC_URL + "/certificates/sliit_aiml_stage1.pdf",
+    image: require("../images/sliit_aiml_stage1.png")
+  },
+  {
+    id: 4,
+    title: "AI/ML Engineer - Stage 2",
+    organization: "SLIIT (Centre for Open and Distance Education)",
+    year: "2026",
+    link: "https://code.sliit.org/certificates/mdk9vmzrk0",
+    pdf: process.env.PUBLIC_URL + "/certificates/sliit_aiml_stage2.pdf",
+    image: require("../images/sliit_aiml_stage2.png")
+  },
+  {
+    id: 9,
+    title: "C# (Basic)",
+    organization: "HackerRank (ID: 90F3DC85F14E)",
+    year: "2026",
+    link: "https://www.hackerrank.com/certificates/90f3dc85f14e",
+    pdf: process.env.PUBLIC_URL + "/certificates/c_sharp_basic certificate.pdf",
+    image: require("../images/csharp_cert.png")
+  },
+  {
     id: 1,
     title: "Software Engineer Intern",
     organization: "HackerRank (ID: 240DE6B47793)",
@@ -96,24 +141,6 @@ const certificatesData = [
     image: require("../images/uom_python.png")
   },
   {
-    id: 4,
-    title: "AI/ML Engineer - Stage 2",
-    organization: "SLIIT (Centre for Open and Distance Education)",
-    year: "2026",
-    link: "https://code.sliit.org/certificates/mdk9vmzrk0",
-    pdf: process.env.PUBLIC_URL + "/certificates/sliit_aiml_stage2.pdf",
-    image: require("../images/sliit_aiml_stage2.png")
-  },
-  {
-    id: 5,
-    title: "AI/ML Engineer - Stage 1",
-    organization: "SLIIT (Centre for Open and Distance Education)",
-    year: "2026",
-    link: "https://code.sliit.org/certificates/elolaoxbj0",
-    pdf: process.env.PUBLIC_URL + "/certificates/sliit_aiml_stage1.pdf",
-    image: require("../images/sliit_aiml_stage1.png")
-  },
-  {
     id: 6,
     title: "MongoDB Atlas Administrator Path",
     organization: "MongoDB",
@@ -121,33 +148,6 @@ const certificatesData = [
     link: "https://learn.mongodb.com/c/MDBchg9ouyquk",
     pdf: process.env.PUBLIC_URL + "/certificates/mongodb_admin.pdf",
     image: require("../images/mongodb_admin.png")
-  },
-  {
-    id: 7,
-    title: "Frontend Developer (React)",
-    organization: "HackerRank (ID: 6BE09CB97A40)",
-    year: "2026",
-    link: "https://www.hackerrank.com/certificates/6be09cb97a40",
-    pdf: process.env.PUBLIC_URL + "/certificates/frontend_developer_react certificate.pdf",
-    image: require("../images/frontend_react_cert.png")
-  },
-  {
-    id: 8,
-    title: "Software Engineer",
-    organization: "HackerRank (ID: CE20FFECEE6A)",
-    year: "2026",
-    link: "https://www.hackerrank.com/certificates/ce20ffecee6a",
-    pdf: process.env.PUBLIC_URL + "/certificates/software_engineer certificate.pdf",
-    image: require("../images/se_cert.png")
-  },
-  {
-    id: 9,
-    title: "C# (Basic)",
-    organization: "HackerRank (ID: 90F3DC85F14E)",
-    year: "2026",
-    link: "https://www.hackerrank.com/certificates/90f3dc85f14e",
-    pdf: process.env.PUBLIC_URL + "/certificates/c_sharp_basic certificate.pdf",
-    image: require("../images/csharp_cert.png")
   }
 ];
 
