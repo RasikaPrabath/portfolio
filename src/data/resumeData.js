@@ -69,6 +69,15 @@ const skillsData = {
 
 const certificatesData = [
   {
+    id: 10,
+    title: "Python Programming E-Certificate",
+    organization: "Python Programming",
+    year: "2026",
+    link: "#",
+    pdf: process.env.PUBLIC_URL + "/certificates/Python_Programming_E-Certificate.pdf",
+    image: require("../images/uom_python.png")
+  },
+  {
     id: 8,
     title: "Software Engineer",
     organization: "HackerRank (ID: CE20FFECEE6A)",
@@ -153,5 +162,3 @@ const certificatesData = [
 
 
 export { contactData, educationData, experienceData, skillsData, certificatesData };
-
-// Trigger rebuild
