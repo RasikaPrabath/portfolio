@@ -35,11 +35,11 @@ const Certificates = () => {
               <div>
                 {cert.image && (
                   <div className="mb-4 w-full h-48 sm:h-52 overflow-hidden rounded-2xl bg-white dark:bg-gray-900 border border-black/5 dark:border-white/5">
-                    <img
-                      src={cert.image}
-                      alt={cert.title}
-                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    />
+                      <img
+                        src={cert.image?.default || cert.image}
+                        alt={cert.title}
+                        className="h-full w-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
+                      />
                   </div>
                 )}
 

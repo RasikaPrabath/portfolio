@@ -121,8 +121,37 @@ const certificatesData = [
     link: "https://learn.mongodb.com/c/MDBchg9ouyquk",
     pdf: process.env.PUBLIC_URL + "/certificates/mongodb_admin.pdf",
     image: require("../images/mongodb_admin.png")
+  },
+  {
+    id: 7,
+    title: "Frontend Developer (React)",
+    organization: "HackerRank (ID: 6BE09CB97A40)",
+    year: "2026",
+    link: "https://www.hackerrank.com/certificates/6be09cb97a40",
+    pdf: process.env.PUBLIC_URL + "/certificates/frontend_developer_react certificate.pdf",
+    image: require("../images/frontend_react_cert.png")
+  },
+  {
+    id: 8,
+    title: "Software Engineer",
+    organization: "HackerRank (ID: CE20FFECEE6A)",
+    year: "2026",
+    link: "https://www.hackerrank.com/certificates/ce20ffecee6a",
+    pdf: process.env.PUBLIC_URL + "/certificates/software_engineer certificate.pdf",
+    image: require("../images/se_cert.png")
+  },
+  {
+    id: 9,
+    title: "C# (Basic)",
+    organization: "HackerRank (ID: 90F3DC85F14E)",
+    year: "2026",
+    link: "https://www.hackerrank.com/certificates/90f3dc85f14e",
+    pdf: process.env.PUBLIC_URL + "/certificates/c_sharp_basic certificate.pdf",
+    image: require("../images/csharp_cert.png")
   }
 ];
 
 
 export { contactData, educationData, experienceData, skillsData, certificatesData };
+
+// Trigger rebuild
