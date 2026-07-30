@@ -75,7 +75,7 @@ const certificatesData = [
     year: "2026",
     link: "#",
     pdf: process.env.PUBLIC_URL + "/certificates/Python_Programming_E-Certificate.pdf",
-    image: require("../images/uom_python.png")
+    image: require("../images/python_cert_new.png")
   },
   {
     id: 8,
