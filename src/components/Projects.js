@@ -40,7 +40,7 @@ const Projects = () => {
             <motion.article
               key={project.id}
               onClick={() => setActiveProject(project)}
-              className="group cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card p-2 sm:p-4 shadow-sm hover:border-black/10 dark:hover:border-white/10 hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full"
+              className={`group cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card p-2 sm:p-4 shadow-sm hover:border-black/10 dark:hover:border-white/10 hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full ${!showAll && index === 3 ? 'lg:hidden' : ''}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -81,7 +81,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {projectsData.length > 4 && (
+        {projectsData.length > 3 && (
           <motion.div
             className="mt-12 text-center"
             initial={{ opacity: 0 }}
