@@ -70,7 +70,7 @@ const certificatesData = [
   {
     id: 10,
     title: "Python Programming E-Certificate",
-    organization: "Python Programming",
+    organization: "University of Moratuwa (Code: tZsYlSObC6)",
     year: "2026",
     link: "https://open.uom.lk/verify",
     pdf: process.env.PUBLIC_URL + "/certificates/Python_Programming_E-Certificate.pdf",
