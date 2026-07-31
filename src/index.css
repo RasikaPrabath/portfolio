@@ -251,16 +251,16 @@
   }
 
   .lets-talk-btn:hover {
-    background-color: #1F2937;
-    color: #FFFFFF;
-    border-color: #1F2937;
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #1F2937;
+    border-color: rgba(0, 0, 0, 0.2);
     transform: translateY(-1px);
   }
 
   :is(.dark .lets-talk-btn:hover) {
-    background-color: #FFFFFF;
-    color: #07090E;
-    border-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.2);
   }
 
   .timeline-line {
