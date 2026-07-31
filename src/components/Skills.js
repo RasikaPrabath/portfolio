@@ -27,9 +27,9 @@ const Skills = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
     >
-      <div className="flex justify-between mb-2">
-        <span className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white">{skill.name}</span>
-        <span className="text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400">{skill.level}%</span>
+      <div className="flex justify-between mb-1 sm:mb-2 items-center">
+        <span className="text-[9px] sm:text-sm font-semibold text-gray-900 dark:text-white truncate pr-1 leading-none">{skill.name}</span>
+        <span className="text-[9px] sm:text-sm font-medium text-gray-500 dark:text-gray-400 leading-none">{skill.level}%</span>
       </div>
       <div className="h-1 bg-black/5 dark:bg-white/5 rounded-full overflow-hidden">
         <motion.div
@@ -59,16 +59,16 @@ const Skills = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-6">
           {/* Coding Skills */}
           <motion.div
-            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-5 sm:p-8 rounded-3xl shadow-sm"
+            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-3 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-6 tracking-tight">Coding Skills</h3>
+            <h3 className="text-[11px] sm:text-lg font-bold text-gray-900 dark:text-white mb-3 sm:mb-6 tracking-tight">Coding Skills</h3>
             {codingSkills.map((skill, index) => (
               <SkillBar key={skill.name} skill={skill} index={index} />
             ))}
@@ -76,13 +76,13 @@ const Skills = () => {
 
           {/* Professional Skills */}
           <motion.div
-            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-5 sm:p-8 rounded-3xl shadow-sm"
+            className="bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-3 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-6 tracking-tight">Professional Skills</h3>
+            <h3 className="text-[11px] sm:text-lg font-bold text-gray-900 dark:text-white mb-3 sm:mb-6 tracking-tight">Professional Skills</h3>
             {professionalSkills.map((skill, index) => (
               <SkillBar key={skill.name} skill={skill} index={index} />
             ))}

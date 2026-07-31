@@ -77,12 +77,6 @@ const Contact = () => {
       href: "mailto:rasikaprabath8694@gmail.com"
     },
     {
-      icon: "📞",
-      label: "Phone",
-      value: "+94 70 334 8191",
-      href: "tel:+94703348191"
-    },
-    {
       icon: "📍",
       label: "Location",
       value: "Malabe, Sri Lanka",
@@ -105,7 +99,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className="mb-10 grid grid-cols-1 sm:grid-cols-3 gap-4"
+          className="mb-6 sm:mb-10 grid grid-cols-2 gap-2 sm:gap-4 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -115,12 +109,12 @@ const Contact = () => {
             <motion.a
               key={index}
               href={info.href}
-              className="flex flex-col items-center p-5 rounded-3xl border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card shadow-sm hover:border-black/10 dark:hover:border-white/10 transition-all duration-300"
+              className="flex flex-col items-center p-2 sm:p-5 rounded-2xl sm:rounded-3xl border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card shadow-sm hover:border-black/10 dark:hover:border-white/10 transition-all duration-300"
               whileHover={{ y: -3 }}
             >
-              <span className="text-2xl mb-2">{info.icon}</span>
-              <h3 className="text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-1">{info.label}</h3>
-              <p className="text-xs text-gray-900 dark:text-white text-center font-medium break-all">
+              <span className="text-lg sm:text-2xl mb-1 sm:mb-2">{info.icon}</span>
+              <h3 className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-0.5 sm:mb-1">{info.label}</h3>
+              <p className="text-[8px] sm:text-xs text-gray-900 dark:text-white text-center font-medium break-all leading-tight">
                 {info.value}
               </p>
             </motion.a>
@@ -190,9 +184,9 @@ const Contact = () => {
               </div>
             )}
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-2 sm:gap-4 grid-cols-2 md:grid-cols-2">
               <div>
-                <label htmlFor="name" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                <label htmlFor="name" className="mb-1 sm:mb-2 block text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                   Your Name
                 </label>
                 <input
@@ -203,12 +197,12 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
+                  className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
                   placeholder="John Doe"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                <label htmlFor="email" className="mb-1 sm:mb-2 block text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                   Email Address
                 </label>
                 <input
@@ -219,14 +213,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
-                  placeholder="john@example.com"
+                  className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
+                  placeholder="you@example.com"
                 />
               </div>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-2 sm:gap-4 grid-cols-2 md:grid-cols-2">
               <div>
-                <label htmlFor="subject" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                <label htmlFor="subject" className="mb-1 sm:mb-2 block text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                   Subject
                 </label>
                 <input
@@ -237,12 +231,12 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
+                  className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
                   placeholder="Project Inquiry"
                 />
               </div>
               <div>
-                <label htmlFor="mobile" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                <label htmlFor="mobile" className="mb-1 sm:mb-2 block text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                   Mobile Number
                 </label>
                 <input
@@ -252,13 +246,13 @@ const Contact = () => {
                   value={formData.mobile}
                   onChange={handleChange}
                   disabled={isSubmitting}
-                  className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
+                  className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
                   placeholder="+1 (555) 000-0000"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="message" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+              <label htmlFor="message" className="mb-1 sm:mb-2 block text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                 Message
               </label>
               <textarea
@@ -268,8 +262,8 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                rows={6}
-                className="w-full rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-4 py-3 text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 resize-none disabled:opacity-60"
+                rows={4}
+                className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 resize-none disabled:opacity-60 min-h-[80px] sm:min-h-[120px]"
                 placeholder="Tell me about your project..."
               />
             </div>

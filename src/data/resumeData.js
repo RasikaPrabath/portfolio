@@ -1,6 +1,5 @@
 const contactData = {
   email: "rasikaprabath8694@gmail.com",
-  phone: "+94 70 334 8191",
   location: "Malabe, Sri Lanka"
 };
 
