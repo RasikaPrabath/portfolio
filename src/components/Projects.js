@@ -53,23 +53,25 @@ const Projects = () => {
               </div>
               <div className="p-2 sm:p-3 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white mt-3 mb-1.5 tracking-tight group-hover:text-gray-750 transition-colors">
+                  <h3 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white mt-2 sm:mt-3 mb-1 sm:mb-1.5 tracking-tight group-hover:text-gray-750 transition-colors line-clamp-3 sm:line-clamp-none">
                     {project.title}
                   </h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 font-light leading-relaxed">{project.description}</p>
+                  <div className="hidden sm:block">
+                    <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 font-light leading-relaxed">{project.description}</p>
+                  </div>
                 </div>
                 <div>
-                  <div className="mt-4 flex flex-wrap gap-1.5">
-                    {project.techStack.slice(0, 3).map(tech => (
+                  <div className="mt-2 sm:mt-4 flex flex-nowrap overflow-hidden gap-1 sm:gap-1.5">
+                    {project.techStack.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="rounded-full bg-gray-100 dark:bg-dark-hover border border-black/5 dark:border-white/5 px-2.5 py-0.5 text-[10px] font-semibold text-gray-600 dark:text-gray-400"
+                        className="whitespace-nowrap rounded-full bg-gray-100 dark:bg-dark-hover border border-black/5 dark:border-white/5 px-1.5 sm:px-2.5 py-0.5 text-[8.5px] sm:text-[10px] font-semibold text-gray-600 dark:text-gray-400 flex-shrink-0"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <button className="mt-4 inline-flex items-center text-xs font-semibold text-gray-900 dark:text-white hover:opacity-85 transition-opacity">
+                  <button className="mt-2 sm:mt-4 inline-flex items-center text-[10px] sm:text-xs font-semibold text-gray-900 dark:text-white hover:opacity-85 transition-opacity">
                     View details
                     <svg className="ml-1 h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
