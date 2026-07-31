@@ -72,7 +72,7 @@ const certificatesData = [
     title: "Python Programming E-Certificate",
     organization: "Python Programming",
     year: "2026",
-    link: "#",
+    link: "https://open.uom.lk/verify",
     pdf: process.env.PUBLIC_URL + "/certificates/Python_Programming_E-Certificate.pdf",
     image: require("../images/python_cert_new.png")
   },
