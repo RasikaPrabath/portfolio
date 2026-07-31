@@ -66,13 +66,23 @@ const Certificates = () => {
 
         {certificatesData.length > 4 && (
           <motion.div
+            id="certificates-button-container"
             className="mt-12 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             <button
-              onClick={() => setShowAll(!showAll)}
+              onClick={() => {
+                if (showAll) {
+                  setShowAll(false);
+                  setTimeout(() => {
+                    document.getElementById('certificates-button-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }, 50);
+                } else {
+                  setShowAll(true);
+                }
+              }}
               className="btn-outline"
             >
               {showAll ? "Show Less" : "Show More"}

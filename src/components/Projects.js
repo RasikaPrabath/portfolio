@@ -83,13 +83,23 @@ const Projects = () => {
 
         {projectsData.length > 3 && (
           <motion.div
+            id="projects-button-container"
             className="mt-12 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             <button
-              onClick={() => setShowAll(!showAll)}
+              onClick={() => {
+                if (showAll) {
+                  setShowAll(false);
+                  setTimeout(() => {
+                    document.getElementById('projects-button-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }, 50);
+                } else {
+                  setShowAll(true);
+                }
+              }}
               className="btn-outline"
             >
               {showAll ? "Show Less" : "Show More"}
