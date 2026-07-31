@@ -64,7 +64,7 @@ const Certificates = () => {
           ))}
         </div>
 
-        {!showAll && certificatesData.length > 4 && (
+        {certificatesData.length > 4 && (
           <motion.div
             className="mt-12 text-center"
             initial={{ opacity: 0 }}
@@ -72,10 +72,10 @@ const Certificates = () => {
             viewport={{ once: true }}
           >
             <button
-              onClick={() => setShowAll(true)}
+              onClick={() => setShowAll(!showAll)}
               className="btn-outline"
             >
-              Show More
+              {showAll ? "Show Less" : "Show More"}
             </button>
           </motion.div>
         )}

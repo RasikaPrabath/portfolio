@@ -81,7 +81,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {!showAll && projectsData.length > 4 && (
+        {projectsData.length > 4 && (
           <motion.div
             className="mt-12 text-center"
             initial={{ opacity: 0 }}
@@ -89,10 +89,10 @@ const Projects = () => {
             viewport={{ once: true }}
           >
             <button
-              onClick={() => setShowAll(true)}
+              onClick={() => setShowAll(!showAll)}
               className="btn-outline"
             >
-              Show More
+              {showAll ? "Show Less" : "Show More"}
             </button>
           </motion.div>
         )}
@@ -108,7 +108,7 @@ const Projects = () => {
             onClick={() => setActiveProject(null)}
           >
             <motion.div
-              className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-3xl bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-4 sm:p-8 shadow-xl space-y-6 scrollbar-thin"
+              className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-3xl bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-4 sm:p-6 shadow-xl space-y-4 scrollbar-thin"
               initial={{ y: 30, opacity: 0, scale: 0.98 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={{ y: 20, opacity: 0, scale: 0.98 }}
@@ -125,9 +125,9 @@ const Projects = () => {
                 </svg>
               </button>
 
-              <div className="space-y-5">
+              <div className="space-y-3 sm:space-y-4">
                 {/* Header Information */}
-                <div className="space-y-2 pr-10">
+                <div className="space-y-1.5 pr-10">
                   <div className="flex items-center gap-2">
                     <span className="inline-block px-2.5 py-0.5 bg-gray-100 dark:bg-dark-hover text-gray-800 dark:text-white text-[10px] font-semibold uppercase tracking-wider rounded-full shadow-sm">
                       {activeProject.type}
@@ -139,30 +139,30 @@ const Projects = () => {
                 </div>
 
                  {/* Info Credentials / Client / Timeline details */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[
                     { label: "My Role", value: activeProject.role || "Developer" },
                     { label: "Team", value: activeProject.teamSize || "Individual" },
                     { label: "Timeline", value: activeProject.duration || "N/A" },
                     { label: "Client", value: activeProject.client || "Freelance" }
                   ].map((info, idx) => (
-                    <div key={idx} className="rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 p-3">
-                      <p className="text-[10px] text-gray-400 dark:text-gray-500 uppercase font-semibold tracking-wider">{info.label}</p>
-                      <p className="mt-1 text-xs font-bold text-gray-900 dark:text-white break-words" title={info.value}>{info.value}</p>
+                    <div key={idx} className="rounded-xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 p-2 sm:p-3 flex flex-col justify-center">
+                      <p className="text-[9px] sm:text-[10px] text-gray-400 dark:text-gray-500 uppercase font-semibold tracking-wider">{info.label}</p>
+                      <p className="mt-0.5 sm:mt-1 text-[10px] sm:text-xs font-bold text-gray-900 dark:text-white break-words leading-tight" title={info.value}>{info.value}</p>
                     </div>
                   ))}
                 </div>
 
                 {/* Problem, Solution, Overview bento structure */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                   {[
                     { title: "Overview", text: activeProject.overview || activeProject.description },
                     { title: "Problem", text: activeProject.problem || "Streamlining complex workflows and improving system reliability." },
                     { title: "Solution", text: activeProject.solution || "Implementing responsive full-stack modules and automation suites." }
                   ].map((part, idx) => (
-                    <div key={idx} className="rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 p-4 space-y-1.5">
-                      <h4 className="text-xs font-bold text-gray-900 dark:text-white tracking-tight">{part.title}</h4>
-                      <p className="text-xs leading-relaxed text-gray-500 dark:text-gray-400 font-light">{part.text}</p>
+                    <div key={idx} className="rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 p-3 sm:p-4 space-y-1 sm:space-y-1.5">
+                      <h4 className="text-[11px] sm:text-xs font-bold text-gray-900 dark:text-white tracking-tight">{part.title}</h4>
+                      <p className="text-[10px] sm:text-xs leading-snug sm:leading-relaxed text-gray-500 dark:text-gray-400 font-light">{part.text}</p>
                     </div>
                   ))}
                 </div>
