@@ -68,6 +68,15 @@ const skillsData = {
 
 const certificatesData = [
   {
+    id: 11,
+    title: "AWS Certified Cloud Practitioner",
+    organization: "Amazon Web Services",
+    year: "2026",
+    link: "https://skillbuilder.aws/learn/94T2BEN85A/aws-cloud-practitioner-essentials/8D79F3AVR7",
+    pdf: process.env.PUBLIC_URL + "/certificates/aws_cloud_practitioner.pdf",
+    image: require("../images/aws_cloud_practitioner.png")
+  },
+  {
     id: 10,
     title: "Python Programming E-Certificate",
     organization: "University of Moratuwa (Code: tZsYlSObC6)",
