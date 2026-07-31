@@ -20,11 +20,11 @@ const Certificates = () => {
           <p className="mt-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-light">Professional certifications and achievements</p>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {displayedCertificates.map((cert, index) => (
             <motion.div
               key={cert.id}
-              className="group rounded-3xl border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card p-5 shadow-sm hover:border-black/10 dark:hover:border-white/10 hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between"
+              className="group rounded-2xl sm:rounded-3xl border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card p-3 sm:p-5 shadow-sm hover:border-black/10 dark:hover:border-white/10 hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -34,7 +34,7 @@ const Certificates = () => {
             >
               <div>
                 {cert.image && (
-                  <div className="mb-4 w-full h-48 sm:h-52 overflow-hidden rounded-2xl bg-white dark:bg-gray-900 border border-black/5 dark:border-white/5">
+                  <div className="mb-3 sm:mb-4 w-full h-28 sm:h-52 overflow-hidden rounded-xl sm:rounded-2xl bg-white dark:bg-gray-900 border border-black/5 dark:border-white/5">
                     <img
                       src={cert.image?.default || cert.image}
                       alt={cert.title}

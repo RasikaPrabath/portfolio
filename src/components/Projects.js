@@ -19,7 +19,7 @@ const Projects = () => {
     };
   }, [activeProject]);
 
-  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 3);
+  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 4);
 
   return (
     <section id="work" className="relative py-16 bg-transparent">
@@ -35,23 +35,23 @@ const Projects = () => {
           <p className="mt-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-light">Featured projects and case studies</p>
         </motion.div>
 
-        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-3">
           {displayedProjects.map((project, index) => (
             <motion.article
               key={project.id}
               onClick={() => setActiveProject(project)}
-              className="group cursor-pointer overflow-hidden rounded-3xl border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card p-4 shadow-sm hover:border-black/10 dark:hover:border-white/10 hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full"
+              className="group cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl border border-black/5 dark:border-white/5 bg-white dark:bg-dark-card p-2 sm:p-4 shadow-sm hover:border-black/10 dark:hover:border-white/10 hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -4 }}
             >
-              <div className="h-44 sm:h-48 w-full overflow-hidden rounded-2xl bg-gray-50 dark:bg-dark-hover relative border border-black/5 dark:border-white/5 flex items-center justify-center">
+              <div className="h-28 sm:h-48 w-full overflow-hidden rounded-xl sm:rounded-2xl bg-gray-50 dark:bg-dark-hover relative border border-black/5 dark:border-white/5 flex items-center justify-center">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
                 <span className="absolute top-3 left-3 inline-block px-2.5 py-0.5 bg-gray-900/90 dark:bg-white/90 text-white dark:text-gray-900 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm">{project.type}</span>
               </div>
-              <div className="p-3 flex-1 flex flex-col justify-between">
+              <div className="p-2 sm:p-3 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-base font-bold text-gray-900 dark:text-white mt-3 mb-1.5 tracking-tight group-hover:text-gray-750 transition-colors">
                     {project.title}
@@ -81,7 +81,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {!showAll && projectsData.length > 3 && (
+        {!showAll && projectsData.length > 4 && (
           <motion.div
             className="mt-12 text-center"
             initial={{ opacity: 0 }}
