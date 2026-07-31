@@ -99,7 +99,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className="mb-6 sm:mb-10 grid grid-cols-2 gap-2 sm:gap-4 max-w-2xl mx-auto"
+          className="mb-6 sm:mb-10 grid grid-cols-2 gap-2 sm:gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
