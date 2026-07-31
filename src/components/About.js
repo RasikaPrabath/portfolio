@@ -127,7 +127,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative pt-12 sm:pt-14 pb-12 bg-transparent overflow-hidden">
+    <section id="about" className="relative pt-16 sm:pt-14 pb-12 bg-transparent overflow-hidden">
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8">
         <motion.div
           className="mb-12 flex flex-col md:flex-row items-center gap-8 md:gap-16"
