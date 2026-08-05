@@ -24,7 +24,7 @@ const projectsData = [
     ],
     image: ledgerlyImg,
     github: "https://github.com/RasikaPrabath/fullcycle-engineer",
-    link: "https://fullcycle-engineer.vercel.app",
+    link: "https://myledgerly.vercel.app/",
     client: "Personal Showcase",
     duration: "2 Months",
     teamSize: "Individual Project",
