@@ -1,23 +1,9 @@
 import { motion } from "framer-motion";
+import { skillsData } from "../data/resumeData";
 
 const Skills = () => {
-  const codingSkills = [
-    { name: "HTML/CSS", level: 90 },
-    { name: "JavaScript", level: 60 },
-    { name: "Bootstrap", level: 60 },
-    { name: "JAVA", level: 80 },
-    { name: "PHP", level: 70 },
-    { name: "MySQL", level: 90 }
-  ];
-
-  const professionalSkills = [
-    { name: "Frontend Development", level: 90 },
-    { name: "Quality Testing", level: 80 },
-    { name: "Marketing", level: 80 },
-    { name: "Business analysis", level: 70 },
-    { name: "Project Management", level: 70 },
-    { name: "Content Creation", level: 95 }
-  ];
+  const codingSkills = skillsData?.coding || [];
+  const professionalSkills = skillsData?.professional || [];
 
   const SkillBar = ({ skill, index }) => (
     <motion.div

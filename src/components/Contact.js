@@ -198,7 +198,7 @@ const Contact = () => {
                   required
                   disabled={isSubmitting}
                   className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
-                  placeholder="John Doe"
+                  placeholder="Enter your name"
                 />
               </div>
               <div>
@@ -214,7 +214,7 @@ const Contact = () => {
                   required
                   disabled={isSubmitting}
                   className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
-                  placeholder="you@example.com"
+                  placeholder="name@company.com"
                 />
               </div>
             </div>
@@ -232,7 +232,7 @@ const Contact = () => {
                   required
                   disabled={isSubmitting}
                   className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
-                  placeholder="Project Inquiry"
+                  placeholder="e.g. Web Development Project"
                 />
               </div>
               <div>
@@ -247,7 +247,7 @@ const Contact = () => {
                   onChange={handleChange}
                   disabled={isSubmitting}
                   className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 disabled:opacity-60"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="e.g. +94 77 123 4567"
                 />
               </div>
             </div>
@@ -264,7 +264,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 rows={4}
                 className="w-full rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 px-3 py-2.5 sm:px-4 sm:py-3 text-[11px] sm:text-sm text-gray-900 dark:text-white focus:bg-white dark:focus:bg-dark-card focus:border-black dark:focus:border-white focus:outline-none transition-all duration-200 resize-none disabled:opacity-60 min-h-[80px] sm:min-h-[120px]"
-                placeholder="Tell me about your project..."
+                placeholder="Describe your project scope, requirements, or goals..."
               />
             </div>
             <div className="text-center pt-2">

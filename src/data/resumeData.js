@@ -49,20 +49,20 @@ const experienceData = [
 
 const skillsData = {
   coding: [
-    { name: "React", level: 95 },
-    { name: "JavaScript/TypeScript", level: 90 },
-    { name: "Node.js", level: 85 },
-    { name: "HTML/CSS", level: 95 },
-    { name: "Tailwind CSS", level: 90 },
-    { name: "GraphQL", level: 80 }
+    { name: "React 19 & Next.js", level: 95 },
+    { name: "TypeScript & JavaScript", level: 92 },
+    { name: "ASP.NET Core & C#", level: 88 },
+    { name: "Python & Generative AI", level: 86 },
+    { name: "Node.js & REST APIs", level: 88 },
+    { name: "PostgreSQL & MongoDB", level: 85 }
   ],
   professional: [
-    { name: "UI/UX Design", level: 90 },
-    { name: "Figma/Design Tools", level: 85 },
-    { name: "Problem Solving", level: 95 },
-    { name: "Communication", level: 88 },
-    { name: "Project Management", level: 82 },
-    { name: "Team Leadership", level: 85 }
+    { name: "Full-Stack System Architecture", level: 92 },
+    { name: "UI/UX & Graphic Design", level: 90 },
+    { name: "Database Security & RLS", level: 88 },
+    { name: "Technical Content Creation", level: 95 },
+    { name: "Agile & Team Leadership", level: 86 },
+    { name: "Cloud & DevOps (AWS)", level: 82 }
   ]
 };
 
