@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://rasikaprabath12345.github.io/",
+  "homepage": "https://www.rasikaprabath.me",
   "private": true,
   "dependencies": {
     "ajv": "^8.20.0",
