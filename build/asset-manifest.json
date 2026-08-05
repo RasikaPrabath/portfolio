@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.125aaec4.css",
-    "main.js": "/static/js/main.bd1d5903.js",
+    "main.js": "/static/js/main.18fe2cef.js",
     "static/js/453.a7d99afe.chunk.js": "/static/js/453.a7d99afe.chunk.js",
     "static/media/mongodb_admin.png": "/static/media/mongodb_admin.2bfc333c1e9534c8f298.png",
     "static/media/unishare_platform.png": "/static/media/unishare_platform.23ec0834bbc8735b3e6f.png",
@@ -25,11 +25,11 @@
     "static/media/234.jpeg": "/static/media/234.8ba44a6e8f8e16661eb1.jpeg",
     "index.html": "/index.html",
     "main.125aaec4.css.map": "/static/css/main.125aaec4.css.map",
-    "main.bd1d5903.js.map": "/static/js/main.bd1d5903.js.map",
+    "main.18fe2cef.js.map": "/static/js/main.18fe2cef.js.map",
     "453.a7d99afe.chunk.js.map": "/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.125aaec4.css",
-    "static/js/main.bd1d5903.js"
+    "static/js/main.18fe2cef.js"
   ]
 }
