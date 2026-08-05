@@ -21,10 +21,10 @@ const App = () => {
           <Hero />
           <About />
           <Projects />
-          <Education />
-          <Experience />
           <Skills />
+          <Experience />
           <Certificates />
+          <Education />
           <Contact />
         </main>
         <Footer />
