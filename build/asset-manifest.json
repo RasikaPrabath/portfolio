@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.125aaec4.css",
-    "main.js": "/static/js/main.b7d3cf06.js",
+    "main.js": "/static/js/main.f8145193.js",
     "static/js/453.a7d99afe.chunk.js": "/static/js/453.a7d99afe.chunk.js",
+    "static/media/ledgerly.png": "/static/media/ledgerly.7215637eadb7be28d8d8.png",
+    "static/media/profile.jpeg": "/static/media/profile.0ab52f2276595a697086.jpeg",
     "static/media/mongodb_admin.png": "/static/media/mongodb_admin.2bfc333c1e9534c8f298.png",
     "static/media/unishare_platform.png": "/static/media/unishare_platform.23ec0834bbc8735b3e6f.png",
     "static/media/upcoming_ai_workspace_ui.png": "/static/media/upcoming_ai_workspace_ui.ebfb9d76083bc0386705.png",
-    "static/media/ledgerly.png": "/static/media/ledgerly.851a2db5ae67a9be5f95.png",
     "static/media/luxury_store.png": "/static/media/luxury_store.12c806262143bdc8cb1b.png",
     "static/media/hackerrank_rest_api.png": "/static/media/hackerrank_rest_api.9ca931e9c3dc05dee87c.png",
     "static/media/upcoming_fintech_ui.png": "/static/media/upcoming_fintech_ui.53154582429bf6d52abb.png",
@@ -21,15 +22,14 @@
     "static/media/python_cert_new.png": "/static/media/python_cert_new.05a1234f8b80bf6b9e8b.png",
     "static/media/sliit_aiml_stage2.png": "/static/media/sliit_aiml_stage2.2b733b07879429642220.png",
     "static/media/sliit_aiml_stage1.png": "/static/media/sliit_aiml_stage1.169c758fda6f67721b5d.png",
-    "static/media/profile.jpeg": "/static/media/profile.7341cbf5fc11f000ce02.jpeg",
     "static/media/234.jpeg": "/static/media/234.8ba44a6e8f8e16661eb1.jpeg",
     "index.html": "/index.html",
     "main.125aaec4.css.map": "/static/css/main.125aaec4.css.map",
-    "main.b7d3cf06.js.map": "/static/js/main.b7d3cf06.js.map",
+    "main.f8145193.js.map": "/static/js/main.f8145193.js.map",
     "453.a7d99afe.chunk.js.map": "/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.125aaec4.css",
-    "static/js/main.b7d3cf06.js"
+    "static/js/main.f8145193.js"
   ]
 }
