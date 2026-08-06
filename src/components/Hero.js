@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import useTypingEffect from "../hooks/useTypingEffect";
 import DefaultAvatar from "./DefaultAvatar";
-import profileImg from "../images/profile.jpg";
+import profileImg from "../images/profile.jpeg";
 
 const Hero = () => {
   const skills = [
