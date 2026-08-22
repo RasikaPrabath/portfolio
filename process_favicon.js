@@ -1,9 +1,8 @@
 const sharp = require('sharp');
-const pngToIco = require('png-to-ico').default || require('png-to-ico');
 const fs = require('fs');
 
 async function processImage() {
-  const inputFile = './public/profile.jpg';
+  const inputFile = './public/profile_zoomed.jpg';
   
   try {
     const metadata = await sharp(inputFile).metadata();
@@ -20,41 +19,44 @@ async function processImage() {
       .toBuffer();
       
     // Create a circular SVG mask and apply it
-    const circleSvg = `<svg width="${size}" height="${size}"><circle cx="${size/2}" cy="${size/2}" r="${size/2}" /></svg>`;
+    const circleSvg = `<svg width="${size}" height="${size}"><circle cx="${size/2}" cy="${size/2}" r="${size/2}" fill="#000" /></svg>`;
     const circleBuffer = await sharp(squareBuffer)
       .composite([{ input: Buffer.from(circleSvg), blend: 'dest-in' }])
       .png()
       .toBuffer();
       
-    // Create 512x512 and 192x192 logos
-    await sharp(circleBuffer).resize(512, 512).png().toFile('./public/logo512.png');
-    console.log('Created ./public/logo512.png');
-    
-    await sharp(circleBuffer).resize(192, 192).png().toFile('./public/logo192.png');
-    console.log('Created ./public/logo192.png');
-    
-    // Create favicon sizes
-    const faviconSize = 256;
-    
-    const faviconPngBuffer = await sharp(circleBuffer)
-      .resize(faviconSize, faviconSize)
-      .png()
-      .toBuffer();
+    // Generate icons of various sizes
+    const sizes = [
+      { size: 512, path: './public/logo512.png' },
+      { size: 192, path: './public/logo192.png' },
+      { size: 180, path: './public/apple-touch-icon.png' },
+      { size: 144, path: './public/favicon-144.png' },
+      { size: 96, path: './public/favicon-96.png' },
+      { size: 48, path: './public/favicon-48.png' },
+      { size: 32, path: './public/favicon-32.png' }
+    ];
+
+    for (const item of sizes) {
+      await sharp(circleBuffer)
+        .resize(item.size, item.size, { fit: 'cover' })
+        .png()
+        .toFile(item.path);
+      console.log(`Created ${item.path}`);
+    }
       
-    // Write a temporary PNG for png-to-ico
-    fs.writeFileSync('./public/temp_favicon.png', faviconPngBuffer);
-    
-    const icoBuffer = await pngToIco('./public/temp_favicon.png');
-    fs.writeFileSync('./public/favicon.ico', icoBuffer);
+    // Create favicon.ico (256x256 PNG format inside .ico file, universally supported)
+    await sharp(circleBuffer)
+      .resize(256, 256, { fit: 'cover' })
+      .png()
+      .toFile('./public/favicon.ico');
     console.log('Created ./public/favicon.ico');
-    
-    // Cleanup temp
-    fs.unlinkSync('./public/temp_favicon.png');
-    
-    console.log('All icons generated successfully!');
+
+    console.log('All zoomed headshot icons generated successfully!');
   } catch (error) {
     console.error('Error processing image:', error);
   }
 }
 
 processImage();
+
+
