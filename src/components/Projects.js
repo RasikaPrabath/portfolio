@@ -120,7 +120,7 @@ const Projects = () => {
             onClick={() => setActiveProject(null)}
           >
             <motion.div
-              className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-3xl bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-4 sm:p-6 shadow-xl space-y-4 scrollbar-thin"
+              className="relative max-h-[85vh] w-full max-w-2xl md:max-w-4xl lg:max-w-5xl overflow-y-auto rounded-3xl bg-white dark:bg-dark-card border border-black/5 dark:border-white/5 p-4 sm:p-6 shadow-xl space-y-4 scrollbar-thin"
               initial={{ y: 30, opacity: 0, scale: 0.98 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={{ y: 20, opacity: 0, scale: 0.98 }}
@@ -150,41 +150,82 @@ const Projects = () => {
                   <p className="text-xs sm:text-sm text-gray-650 dark:text-gray-400 leading-relaxed font-light">{activeProject.description}</p>
                 </div>
 
-                 {/* Info Credentials / Client / Timeline details */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                {/* Info Credentials / Client / Timeline details */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {[
-                    { label: "My Role", value: activeProject.role || "Developer" },
-                    { label: "Team", value: activeProject.teamSize || "Individual" },
-                    { label: "Timeline", value: activeProject.duration || "N/A" },
-                    { label: "Client", value: activeProject.client || "Freelance" }
+                    { label: "Role", value: activeProject.role || "Developer", icon: "👤" },
+                    { label: "Team", value: activeProject.teamSize || "Individual", icon: "👥" },
+                    { label: "Timeline", value: activeProject.duration || "N/A", icon: "⏱️" },
+                    { label: "Client", value: activeProject.client || "Freelance", icon: "🏢" }
                   ].map((info, idx) => (
-                    <div key={idx} className="rounded-xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 p-2 sm:p-3 flex flex-col justify-center">
-                      <p className="text-[9px] sm:text-[10px] text-gray-400 dark:text-gray-500 uppercase font-semibold tracking-wider">{info.label}</p>
-                      <p className="mt-0.5 sm:mt-1 text-[10px] sm:text-xs font-bold text-gray-900 dark:text-white break-words leading-tight" title={info.value}>{info.value}</p>
+                    <div key={idx} className="rounded-2xl border border-black/5 dark:border-white/10 bg-gray-50/80 dark:bg-dark-hover/60 p-3 sm:p-4 flex flex-col justify-between shadow-sm hover:border-blue-500/30 transition-colors">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] sm:text-xs text-gray-400 dark:text-gray-400 uppercase font-semibold tracking-wider">{info.label}</span>
+                        <span className="text-xs">{info.icon}</span>
+                      </div>
+                      <p className="mt-2 text-xs sm:text-sm font-bold text-gray-900 dark:text-white break-words leading-tight" title={info.value}>{info.value}</p>
                     </div>
                   ))}
                 </div>
 
-                {/* Problem, Solution, Overview bento structure */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  {[
-                    { title: "Overview", text: activeProject.overview || activeProject.description },
-                    { title: "Problem", text: activeProject.problem || "Streamlining complex workflows and improving system reliability." },
-                    { title: "Solution", text: activeProject.solution || "Implementing responsive full-stack modules and automation suites." }
-                  ].map((part, idx) => (
-                    <div key={idx} className="rounded-xl sm:rounded-2xl border border-black/5 dark:border-white/5 bg-gray-50 dark:bg-dark-hover/50 p-3 sm:p-4 space-y-1 sm:space-y-1.5">
-                      <h4 className="text-[11px] sm:text-xs font-bold text-gray-900 dark:text-white tracking-tight">{part.title}</h4>
-                      <p className="text-[10px] sm:text-xs leading-snug sm:leading-relaxed text-gray-500 dark:text-gray-400 font-light">{part.text}</p>
+                {/* Engaging Case Study Breakdown */}
+                <div className="space-y-4 pt-1">
+                  {/* Overview Card */}
+                  <div className="rounded-2xl border border-black/5 dark:border-white/10 border-l-4 border-l-blue-500 bg-gradient-to-r from-blue-500/5 via-transparent to-transparent p-4 sm:p-5 space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500 text-xs font-bold">01</span>
+                      <h4 className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider">Overview</h4>
                     </div>
-                  ))}
+                    <p className="text-xs sm:text-sm leading-relaxed text-gray-700 dark:text-gray-300 font-normal">{activeProject.overview || activeProject.description}</p>
+                  </div>
+
+                  {/* Problem & Solution Side-by-Side or Stacked */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Problem Card */}
+                    <div className="rounded-2xl border border-black/5 dark:border-white/10 border-l-4 border-l-amber-500 bg-gradient-to-r from-amber-500/5 via-transparent to-transparent p-4 sm:p-5 space-y-2">
+                      <div className="flex items-center gap-2">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-amber-500/10 text-amber-500 text-xs font-bold">⚡</span>
+                        <h4 className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider">The Challenge</h4>
+                      </div>
+                      <p className="text-xs sm:text-sm leading-relaxed text-gray-700 dark:text-gray-300 font-normal">{activeProject.problem || "Streamlining complex workflows and improving system reliability."}</p>
+                    </div>
+
+                    {/* Solution Card */}
+                    <div className="rounded-2xl border border-black/5 dark:border-white/10 border-l-4 border-l-emerald-500 bg-gradient-to-r from-emerald-500/5 via-transparent to-transparent p-4 sm:p-5 space-y-2">
+                      <div className="flex items-center gap-2">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500 text-xs font-bold">✨</span>
+                        <h4 className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider">The Solution</h4>
+                      </div>
+                      <p className="text-xs sm:text-sm leading-relaxed text-gray-700 dark:text-gray-300 font-normal">{activeProject.solution || "Implementing responsive full-stack modules and automation suites."}</p>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Main Highlights / Features List */}
+                {activeProject.features && activeProject.features.length > 0 && (
+                  <div className="space-y-2.5 pt-1">
+                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white tracking-tight flex items-center gap-2">
+                      <span>🎯</span> Main Highlights
+                    </h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+                      {activeProject.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="text-blue-500 mt-0.5">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 {/* Technologies List */}
-                <div className="space-y-2">
-                  <h4 className="text-xs font-bold text-gray-900 dark:text-white tracking-tight">Technologies</h4>
-                  <div className="flex flex-wrap gap-1.5">
+                <div className="space-y-2.5 pt-1">
+                  <h4 className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white tracking-tight flex items-center gap-2">
+                    <span>🛠️</span> Technologies Used
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
                     {activeProject.techStack.map(tech => (
-                      <span key={tech} className="rounded-full bg-gray-100 dark:bg-dark-hover border border-black/5 dark:border-white/5 px-2.5 py-0.5 text-[10px] font-semibold text-gray-600 dark:text-gray-400">
+                      <span key={tech} className="rounded-xl bg-gray-100 dark:bg-dark-hover border border-black/5 dark:border-white/10 px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 shadow-2xs hover:border-blue-500/40 transition-colors">
                         {tech}
                       </span>
                     ))}

@@ -5,8 +5,53 @@ import unishareImg from "../images/unishare_platform.png";
 import traveleaseImg from "../images/travelease.jpg";
 import upcomingFintechImg from "../images/upcoming_fintech_ui.png";
 import upcomingAiImg from "../images/upcoming_ai_workspace_ui.png";
+import staysphereImg from "../images/staysphere.jpg";
 
 const projectsData = [
+  {
+    id: 8,
+    type: "Travel / Enterprise",
+    title: "StaySphere — Enterprise Hotel Management & Reservation System",
+    description: "A highly scalable hotel management and reservation ecosystem built with .NET 9.0 (Clean Architecture, DDD, CQRS) and React 18, featuring persistent auth, real-time SignalR push notifications, Redis caching, and Hangfire background workers.",
+    techStack: [
+      "React 18",
+      "ASP.NET Core 9.0",
+      "PostgreSQL 16",
+      "Redis 7.0",
+      "SignalR",
+      "Hangfire",
+      "Docker",
+      "Tailwind CSS v3",
+      "MediatR",
+      "EF Core"
+    ],
+    image: staysphereImg,
+    github: "https://github.com/RasikaPrabath/StaySphere.git",
+    link: null,
+    client: "Personal Showcase",
+    duration: "3 Months",
+    teamSize: "Individual Project",
+    year: "2026",
+    role: "Full-Stack Enterprise Architect",
+    overview: "StaySphere is a production-ready, highly scalable, and secure hotel management and reservation ecosystem designed utilizing Enterprise Design Patterns, Domain-Driven Design (DDD) principles, and Clean Architecture. It features a dual-portal dashboard architecture for customers, hotel partners, and system administrators.",
+    problem: "Hotel booking platforms require seamless coordination between room availability, dynamic pricing, persistent session authentication, instant notifications for booking confirmations, and background cleanup operations for expired unpaid bookings.",
+    solution: "Built a decoupled architecture using ASP.NET Core 9.0 and React. Implemented MediatR CQRS for clean domain separation, Redis 7 for cache-aside search performance (reducing database load), SignalR for real-time WebSocket notifications, and Hangfire for automated background processing (e.g., auto-canceling unpaid reservations).",
+    features: [
+      "Complete Hotel Management & Booking Platform",
+      "3 User Roles: Customer, Hotel Owner (Partner), Admin",
+      "Hotel & Room Management",
+      "Advanced Hotel Search with Redis caching",
+      "Online Booking, Payments & Refunds",
+      "Secure JWT Authentication with refresh tokens",
+      "Real-time Notifications using SignalR",
+      "Reviews, Wishlist & Coupons",
+      "AI Assistant Integration",
+      "Background Jobs using Hangfire",
+      "Modern Tech Stack: React + .NET 9 + PostgreSQL",
+      "Clean Architecture + DDD + CQRS",
+      "Docker & GitHub Actions CI/CD"
+    ]
+  },
   {
     id: 7,
     type: "FinTech / AI",
